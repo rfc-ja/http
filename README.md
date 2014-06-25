@@ -1,2 +1,2 @@
-HTTP RFC Japanese Translation
-=============================
+HTTP RFC 日本語訳
+=================
