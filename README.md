@@ -1,2 +1,2 @@
-http
-====
+HTTP RFC Japanese Translation
+=============================
