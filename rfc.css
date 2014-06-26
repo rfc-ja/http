@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/* RFC翻訳 */
+
+div.translation-note {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  margin: 0 0 1em;
+  font-size: 80%;
+  background-color: #fff;
+}
+div.translation-note p, div.translation-note li {
+  margin: 0;
+  line-height: 130%;
+}
+div.translation-note ul {
+  margin: 0;
+  padding: 0 0 0 2em;
+}
+pre.docket {
+  float: left;
+  font-family: monospace;
+  margin: 0.5em;
+  white-space: pre;
+}
+pre.authors {
+  float: right;
+  font-family: monospace;
+  margin: 0.5em;
+  white-space: pre;
+}
+h1 {
+  clear: both;
+  padding: 0 0.3em;
+  text-align: center;
+}
+
+h1 *:lang(en),
+h2 *:lang(en),
+h3 *:lang(en),
+h4 *:lang(en),
+h5 *:lang(en),
+h6 *:lang(en) {
+  display: none;
+}
