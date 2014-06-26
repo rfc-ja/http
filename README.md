@@ -24,7 +24,9 @@ HTTP RFC 日本語訳
 
     <h1><span lang="ja">見出し</span><span lang="en">Heading</span></h1>
 
-原文での "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", "OPTIONAL" (これらの意味は [RFC 2119](http://tools.ietf.org/html/rfc2119) を参照) に対応する日本語は `em` にてマークアップしてください。
+原文での "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", "OPTIONAL" (これらの意味は [RFC 2119](http://tools.ietf.org/html/rfc2119) を参照) に対応する日本語は `em` にてマークアップしてください。そのとき `title` 属性に元の語を入れるとなお良いです。
+
+    <p lang="ja"> ... を送信し<em title="MUST">なければならない</em>。</p>
 
 ### スタイリング
 
