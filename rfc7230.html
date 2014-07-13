@@ -197,7 +197,28 @@ ISSN: 2070-1721
 
 <section>
 <h2 id="section-1">1. <span lang="ja">導入</span><span lang="en">Introduction</span></h2>
-<pre>
+<pre lang="ja">
+  ハイパーテキスト転送プロトコル（HTTP）は、拡張性のあるセマンティックとネットワークを基礎とするハイパーテキスト情報システムと柔軟性のある相互作用のための自己記述性をもつメッセージの通信パケットを使用する、ステートレスなアプリケーションレベルのリクエスト、もしくはレスポンスプロトコルである。このドキュメントは、HTTP/1.1仕様を集合的に形成するシリーズの初めのものである。
+
+   1. 「メッセージシンタックスとルーティング」（このドキュメント）
+   2. 「セマンティックとコンテンツ」[<a href="http://tools.ietf.org/html/rfc7231" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content&quot;">RFC7231</a>]
+   3. 「条件的リクエスト」[<a href="http://tools.ietf.org/html/rfc7232" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests&quot;">RFC7232</a>]  
+   4. 「範囲リクエスト」[<a href="http://tools.ietf.org/html/rfc7233" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Range Requests&quot;">RFC7233</a>]
+   5. 「キャッシュ」[<a href="http://tools.ietf.org/html/rfc7234" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Caching&quot;">RFC7234</a>]
+   6. 「認証」[<a href="http://tools.ietf.org/html/rfc7235" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Authentication&quot;">RFC7235</a>]
+
+   このHTTP/1.1仕様は<a href="http://tools.ietf.org/html/rfc2616">RFC 2616</a>と<a href="http://tools.ietf.org/html/rfc2145">RFC 2145</a>を置き換える。このドキュメントは、<a href="http://tools.ietf.org/html/rfc2817">RFC 2817</a>で過去に定義されたトンネルを構築するコネクト（CONNECT）を最新のものにし、<a href="http://tools.ietf.org/html/rfc2818">RFC 2818</a>で非公式に記述された、「https」URIスキームも定義するものである。
+
+   HTTPは、情報システムのための包括的なインターフェースプロトコルである。それは提供される情報源から独立したクライアントに対して一様なインターフェースを提示することにより、どのようにサービスが実装の詳細を隠蔽するよう設計されている。同様にサーバーは、各クライアントの目的を認知することを必要とせず、HTTPリクエストはある特定のクライアントの種類、もしくは前もって決定された連続するアプリケーションの段階よりも、もしろ孤立すると考えられる。結果的に多くの多様な内容と、それらの実装が時を追って独立して発展することに対して効果的に使用されるプロトコルとなる。
+
+   HTTPは、HTTPではない情報システムとの意思疎通を司る、中間的なプロトコルとして使用されるよう設計されている。HTTPプロキシとゲートウェイは、幅広いプロトコルをクライアントによってHTTPと同じ形式で閲覧、ならびに操作できるハイパーテキストのフォーマットに訳すことで、代わりの情報サービスへのアクセスを提供できる。
+
+   この柔軟性がもたらす一つの利点は、このプロトコルは、そのインターフェースの背後で起こることでは定義されないということである。代わりに、我々は意思疎通のシンタックス、その受け取られた情報の目的、そして期待される受け手の振る舞いを定義することに限定される。もしその意思疎通が孤立されたと考えられるなら、成功とされるアクションは、サーバーによって提供された、確認可能なインターフェースに対となる変化が反映されているべきである。しかし、複数のクライアント 同時に、かつ食い違う目的を持って行動を起こすかもしれないため、我々はそれらの変化を一つのレスポンスの背景に観察できるようにはできない。
+
+   このドキュメントは、HTTPに使用、もしくは参照される設計要素を記述し、「http」と「https」URIスキーム、包括的ネットワーク動作と接続管理、そしてHTTPメッセージフレームと転送条件を定義する。我々がゴールとするのは、独立したセマンティックである全てのHTTPメッセージを扱うための必要なメカニズムを定義することであり、よってメッセージパーサーとメッセージ転送の中間の完全な必要条件を定義である。
+
+</pre>
+<pre lang="en">
    The Hypertext Transfer Protocol (HTTP) is a stateless application-
    level request/response protocol that uses extensible semantics and
    self-descriptive message payloads for flexible interaction with
