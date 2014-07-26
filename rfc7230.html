@@ -197,32 +197,54 @@ ISSN: 2070-1721
 
 <section>
 <h2 id="section-1">1. <span lang="ja">導入</span><span lang="en">Introduction</span></h2>
-<pre>
+<p lang="ja">
+</p>
+
+<p lang="en">
    The Hypertext Transfer Protocol (HTTP) is a stateless application-
    level request/response protocol that uses extensible semantics and
    self-descriptive message payloads for flexible interaction with
    network-based hypertext information systems.  This document is the
    first in a series of documents that collectively form the HTTP/1.1
-   specification:
+  specification:</p>
 
-   1.  "Message Syntax and Routing" (this document)
+<ol>
+  <li>
+    <p lang="ja"></p>
+    <p lang="en">"Message Syntax and Routing" (this document)</p>
+  </li>
+  <li>
+    <p lang="ja"></p>
+    <p lang="en">"Semantics and Content" [<a href="http://tools.ietf.org/html/rfc7231" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content&quot;">RFC7231</a>]</p>
+  </li>
 
-   2.  "Semantics and Content" [<a href="http://tools.ietf.org/html/rfc7231" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content&quot;">RFC7231</a>]
+  <li>
+    <p lang="ja"></p>
+    <p lang="en">"Conditional Requests" [<a href="http://tools.ietf.org/html/rfc7232" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests&quot;">RFC7232</a>]</p>
+  </li>
+  <li>
+    <p lang="ja"></p>
+    <p lang="en">"Range Requests" [<a href="http://tools.ietf.org/html/rfc7233" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Range Requests&quot;">RFC7233</a>]</p>
+  </li>
+  <li>
+    <p lang="ja"></p>
+    <p lang="en">"Caching" [<a href="http://tools.ietf.org/html/rfc7234" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Caching&quot;">RFC7234</a>]</p>
+  </li>
+  <li>
+    <p lang="ja"></p>
+    <p lang="en">"Authentication" [<a href="http://tools.ietf.org/html/rfc7235" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Authentication&quot;">RFC7235</a>]</p>
+  </li>
+</ol>
 
-   3.  "Conditional Requests" [<a href="http://tools.ietf.org/html/rfc7232" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests&quot;">RFC7232</a>]
-
-   4.  "Range Requests" [<a href="http://tools.ietf.org/html/rfc7233" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Range Requests&quot;">RFC7233</a>]
-
-   5.  "Caching" [<a href="http://tools.ietf.org/html/rfc7234" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Caching&quot;">RFC7234</a>]
-
-   6.  "Authentication" [<a href="http://tools.ietf.org/html/rfc7235" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Authentication&quot;">RFC7235</a>]
-
-   This HTTP/1.1 specification obsoletes <a href="http://tools.ietf.org/html/rfc2616">RFC 2616</a> and <a href="http://tools.ietf.org/html/rfc2145">RFC 2145</a> (on HTTP
+  <p lang="ja"></p>
+  <p lang="en">This HTTP/1.1 specification obsoletes <a href="http://tools.ietf.org/html/rfc2616">RFC 2616</a> and <a href="http://tools.ietf.org/html/rfc2145">RFC 2145</a> (on HTTP
    versioning).  This specification also updates the use of CONNECT to
    establish a tunnel, previously defined in <a href="http://tools.ietf.org/html/rfc2817">RFC 2817</a>, and defines the
-   "https" URI scheme that was described informally in <a href="http://tools.ietf.org/html/rfc2818">RFC 2818</a>.
+  "https" URI scheme that was described informally in <a href="http://tools.ietf.org/html/rfc2818">RFC 2818</a>.</p>
 
-   HTTP is a generic interface protocol for information systems.  It is
+  <p lang="ja"></p>
+
+   <p lang="en">HTTP is a generic interface protocol for information systems.  It is
    designed to hide the details of how a service is implemented by
    presenting a uniform interface to clients that is independent of the
    types of resources provided.  Likewise, servers do not need to be
@@ -230,16 +252,20 @@ ISSN: 2070-1721
    isolation rather than being associated with a specific type of client
    or a predetermined sequence of application steps.  The result is a
    protocol that can be used effectively in many different contexts and
-   for which implementations can evolve independently over time.
+     for which implementations can evolve independently over time.</p>
 
-   HTTP is also designed for use as an intermediation protocol for
+  <p lang="ja"></p>
+
+  <p lang="en">HTTP is also designed for use as an intermediation protocol for
    translating communication to and from non-HTTP information systems.
    HTTP proxies and gateways can provide access to alternative
    information services by translating their diverse protocols into a
    hypertext format that can be viewed and manipulated by clients in the
-   same way as HTTP services.
+     same way as HTTP services.</p>
 
-   One consequence of this flexibility is that the protocol cannot be
+  <p lang="ja"></p>
+
+  <p lang="en">One consequence of this flexibility is that the protocol cannot be
    defined in terms of what occurs behind the interface.  Instead, we
    are limited to defining the syntax of communication, the intent of
    received communication, and the expected behavior of recipients.  If
@@ -248,17 +274,19 @@ ISSN: 2070-1721
    ought to be reflected in corresponding changes to the observable
    interface provided by servers.  However, since multiple clients might
    act in parallel and perhaps at cross-purposes, we cannot require that
-   such changes be observable beyond the scope of a single response.
+     such changes be observable beyond the scope of a single response.</p>
 
-   This document describes the architectural elements that are used or
+  <p lang="ja"></p>
+
+  <p lang="en">This document describes the architectural elements that are used or
    referred to in HTTP, defines the "http" and "https" URI schemes,
    describes overall network operation and connection management, and
    defines HTTP message framing and forwarding requirements.  Our goal
    is to define all of the mechanisms necessary for HTTP message
    handling that are independent of message semantics, thereby defining
    the complete set of requirements for message parsers and message-
-   forwarding intermediaries.
-</pre>
+     forwarding intermediaries.</p>
+
 </section>
 
 <section>
