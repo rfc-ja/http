@@ -219,6 +219,7 @@ ISSN: 2070-1721
     <p lang="en">"Message Syntax and Routing" (this document)</p>
   </li>
   <li>
+    <p lang="ja">「セマンティックとコンテンツ」[<a href="http://tools.ietf.org/html/rfc7231" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content&quot;">RFC7231</a>]</p>
     <p lang="en">"Semantics and Content" [<a href="http://tools.ietf.org/html/rfc7231" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content&quot;">RFC7231</a>]</p>
   </li>
 
@@ -236,10 +237,20 @@ ISSN: 2070-1721
   </li>
 </ol>
 
+  <p lang="ja">このHTTP/1.1仕様は<a href="http://tools.ietf.org/html/rfc2616">RFC 2616</a>と<a href="http://tools.ietf.org/html/rfc2145">RFC 2145</a>を置き換える。
+  このドキュメントは、<a href="http://tools.ietf.org/html/rfc2817">RFC 2817</a>で過去に定義されたトンネルを構築するコネクト（CONNECT）を最新のものにし、<a href="http://tools.ietf.org/html/rfc2818">RFC 2818</a>で非公式に記述された、
+  「https」URIスキームも定義するものである。</p>
+
   <p lang="en">This HTTP/1.1 specification obsoletes <a href="http://tools.ietf.org/html/rfc2616">RFC 2616</a> and <a href="http://tools.ietf.org/html/rfc2145">RFC 2145</a> (on HTTP
    versioning).  This specification also updates the use of CONNECT to
    establish a tunnel, previously defined in <a href="http://tools.ietf.org/html/rfc2817">RFC 2817</a>, and defines the
   "https" URI scheme that was described informally in <a href="http://tools.ietf.org/html/rfc2818">RFC 2818</a>.</p>
+
+  <p lang="ja">HTTPは、情報システムのための包括的なインターフェースプロトコルである。それは提供される情報源から独立したクライアントに
+対して一様なインターフェースを提示することにより、どのようにサービスが実装されているかということの詳細を隠蔽するよう設計されている。
+同様にサーバーは、各クライアントの目的を認知することを必要とせず、HTTPリクエストはある特定のクライアントの種類、もしくは前もって決定された
+連続するアプリケーション段階に付属するというより、もしろ孤立すると考えられる。
+結果的に多くの多様な内容と、それらの実装が時を追って独立して発展することに対して効果的に使用されるプロトコルとなる。</p>
 
   <p lang="en">HTTP is a generic interface protocol for information systems.  It is
    designed to hide the details of how a service is implemented by
