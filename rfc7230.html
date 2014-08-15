@@ -228,6 +228,7 @@ ISSN: 2070-1721
     <p lang="en">"Conditional Requests" [<a href="http://tools.ietf.org/html/rfc7232" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests&quot;">RFC7232</a>]</p>
   </li>
   <li>
+    <p lang="ja">「レンジリクエスト」 [<a href="http://tools.ietf.org/html/rfc7233" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Range Requests&quot;">RFC7233</a>]</p>
     <p lang="en">"Range Requests" [<a href="http://tools.ietf.org/html/rfc7233" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Range Requests&quot;">RFC7233</a>]</p>
   </li>
   <li>
@@ -279,6 +280,14 @@ ISSN: 2070-1721
    information services by translating their diverse protocols into a
    hypertext format that can be viewed and manipulated by clients in the
      same way as HTTP services.</p>
+
+  <p lang="ja">この柔軟性がもたらす一つの帰結は、プロトコルはインターフェースの背後で起こることの見地から定義できないことである。
+代わりに、我々は通信の構文、受信した通信の意図、そして期待される受け手のふるまいを定義することしかできない。
+もし通信が隔離されているとみなされるなら、成功とされるアクションはサーバーによってもたらされ、
+対となる観察可能なインターフェースへの変化に反映されているべきである。
+しかし、複数のクライアントは平行し、おそらく食い違う目的で行動するかもしれない故に、
+我々はそういった変化が単一レスポンスの領域で観察可能である状態を要求できない。
+</p>
 
   <p lang="en">One consequence of this flexibility is that the protocol cannot be
    defined in terms of what occurs behind the interface.  Instead, we
