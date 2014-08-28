@@ -232,6 +232,7 @@ ISSN: 2070-1721
     <p lang="en">"Range Requests" [<a href="http://tools.ietf.org/html/rfc7233" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Range Requests&quot;">RFC7233</a>]</p>
   </li>
   <li>
+    <p lang="en">「キャッシング」 [<a href="http://tools.ietf.org/html/rfc7234" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Caching&quot;">RFC7234</a>]</p>
     <p lang="en">"Caching" [<a href="http://tools.ietf.org/html/rfc7234" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Caching&quot;">RFC7234</a>]</p>
   </li>
   <li>
@@ -298,6 +299,13 @@ ISSN: 2070-1721
    interface provided by servers.  However, since multiple clients might
    act in parallel and perhaps at cross-purposes, we cannot require that
      such changes be observable beyond the scope of a single response.</p>
+
+  <p lang="ja">
+    このドキュメントは、HTTPにて使用もしくは参照されるアーキテクチャ的要素を記述し、"http"および"https"URIスキームを定義し、
+全体的なネットワークオペレーションとコネクション管理を記述し、そしてHTTPメッセージフレーミングと転送の要件を定義する。
+目的は、メッセージセマンティクスとは独立した、HTTPメッセージの扱いに必要なメカニズムの全てを定義することであり、
+それによってメッセージパーサーとメッセージ転送中継者に課される要件の完全な一式を定義することである。
+  </p>
 
   <p lang="en">This document describes the architectural elements that are used or
    referred to in HTTP, defines the "http" and "https" URI schemes,
