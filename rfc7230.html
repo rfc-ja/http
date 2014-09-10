@@ -236,7 +236,9 @@ ISSN: 2070-1721
     <p lang="en">"Caching" [<a href="http://tools.ietf.org/html/rfc7234" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Caching&quot;">RFC7234</a>]</p>
   </li>
   <li>
-    <p>"Authentication" [<a href="http://tools.ietf.org/html/rfc7235" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Authentication&quot;">RFC7235</a>]</p>
+    <p lang="ja">「認証」 [<a href="http://tools.ietf.org/html/rfc7235"
+ title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Authentication&quot;">RFC7235</a>]</p>
+    <p lang="en">"Authentication" [<a href="http://tools.ietf.org/html/rfc7235" title="&quot;Hypertext Transfer Protocol (HTTP/1.1): Authentication&quot;">RFC7235</a>]</p>
   </li>
 </ol>
 
@@ -320,18 +322,34 @@ ISSN: 2070-1721
 
 <section>
 <h3 id="section-1.1">1.1. <span lang="ja">要求水準の記法</span><span lang="en">Requirements Notation</span></h3>
-   <p>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+
+<p lang="ja">この文書中のキーワード、"MUST"、"MUST NOT"、"REQUIRED"、"SHALL"、"SHALL NOT"、"SHOULD"、"SHOULD NOT"、
+"RECOMMENDED"、"MAY"、"OPTIONAL"は、[<a href="http://tools.ietf.org/html/rfc2119" 
+title="&quot;Key words for use in RFCs to Indicate Requirement Levels&quot;">RFC2119</a>]
+に記述されている通りに解釈されるべきである。</p>
+
+   <p lang="en">The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
    document are to be interpreted as described in [<a href="http://tools.ietf.org/html/rfc2119" title="&quot;Key words for use in RFCs to Indicate Requirement Levels&quot;">RFC2119</a>].</p>
 
-   <p>Conformance criteria and considerations regarding error handling are
+   <p lang="ja">適合性の基準とエラー処理に関する考慮は
+   <a href="#section-2.5">セクション 2.5</a>で定義される。</p>
+
+   <p lang="en">Conformance criteria and considerations regarding error handling are
    defined in <a href="#section-2.5">Section 2.5</a>.</p>
 </section>
 
 <section>
 <h3 id="section-1.2">1.2. <span lang="ja">構文の記法</span><span lang="en">Syntax Notation</span></h3>
 
-   <p>This specification uses the Augmented Backus-Naur Form (ABNF)
+   <p lang="ja">この仕様は、[<a href="http://tools.ietf.org/html/rfc5234"
+ title="&quot;Augmented BNF for Syntax Specifications: ABNF&quot;">RFC5234</a>]
+の拡張バッカス・ナウア記法（ABNF）を、<a href="#section-7">セクション 7</a>で定義されるリスト拡張とともに使用する。
+このリスト拡張は、'#'演算子（繰り返しを表す'*'演算子に似ている）を使って、カンマ区切りリストのコンパクトな定義を可能にする。
+<a href="#appendix-B">付録 B</a>に集めた文法を記載する。そこでは、全てのリスト演算子は標準的なABNFに展開されている。
+</p>
+
+   <p lang="en">This specification uses the Augmented Backus-Naur Form (ABNF)
    notation of [<a href="http://tools.ietf.org/html/rfc5234" title="&quot;Augmented BNF for Syntax Specifications: ABNF&quot;">RFC5234</a>] with a list extension, defined in <a href="#section-7">Section 7</a>,
    that allows for compact definition of comma-separated lists using a
    '#' operator (similar to how the '*' operator indicates repetition).
