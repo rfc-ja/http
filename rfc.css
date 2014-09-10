@@ -40,6 +40,7 @@ h2 *:lang(en),
 h3 *:lang(en),
 h4 *:lang(en),
 h5 *:lang(en),
-h6 *:lang(en) {
+h6 *:lang(en),
+section *:lang(en) {
   display: none;
 }
