@@ -382,18 +382,19 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
 <section>
 <h2 id="section-2">2. <span lang="ja">アーキテクチャ</span><span lang="en">Architecture</span></h2>
 
-<pre>
+<p>
    HTTP was created for the World Wide Web (WWW) architecture and has
    evolved over time to support the scalability needs of a worldwide
    hypertext system.  Much of that architecture is reflected in the
    terminology and syntax productions used to define HTTP.
+</p>
 
+</section>
 
-
-
-
+<section>
 <span class="h3"><a class="selflink" name="section-2.1" href="#section-2.1">2.1</a>.  Client/Server Messaging</span>
 
+<p>
    HTTP is a stateless request/response protocol that operates by
    exchanging messages (<a href="#section-3">Section 3</a>) across a reliable transport- or
    session-layer "connection" (<a href="#section-6">Section 6</a>).  An HTTP "client" is a
@@ -401,7 +402,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    sending one or more HTTP requests.  An HTTP "server" is a program
    that accepts connections in order to service HTTP requests by sending
    HTTP responses.
+</p>
 
+<p>
    The terms "client" and "server" refer only to the roles that these
    programs perform for a particular connection.  The same program might
    act as a client on some connections and a server on others.  The term
@@ -412,24 +415,32 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    originate authoritative responses for a given target resource.  The
    terms "sender" and "recipient" refer to any implementation that sends
    or receives a given message, respectively.
+</p>
 
+<p>
    HTTP relies upon the Uniform Resource Identifier (URI) standard
    [<a href="http://tools.ietf.org/html/rfc3986" title="&quot;Uniform Resource Identifier (URI): Generic Syntax&quot;">RFC3986</a>] to indicate the target resource (<a href="#section-5.1">Section 5.1</a>) and
    relationships between resources.  Messages are passed in a format
    similar to that used by Internet mail [<a href="http://tools.ietf.org/html/rfc5322" title="&quot;Internet Message Format&quot;">RFC5322</a>] and the Multipurpose
    Internet Mail Extensions (MIME) [<a href="http://tools.ietf.org/html/rfc2045" title="&quot;Multipurpose Internet Mail Extensions (MIME) Part One: Format of Internet Message Bodies&quot;">RFC2045</a>] (see <a href="http://tools.ietf.org/html/rfc7231#appendix-A">Appendix&nbsp;A of
    [RFC7231]</a> for the differences between HTTP and MIME messages).
+</p>
 
+<p>
    Most HTTP communication consists of a retrieval request (GET) for a
    representation of some resource identified by a URI.  In the simplest
    case, this might be accomplished via a single bidirectional
    connection (===) between the user agent (UA) and the origin
    server (O).
+</p>
 
+<pre>
             request   &gt;
        UA ======================================= O
                                    &lt;   response
+</pre>
 
+<p>
    A client sends an HTTP request to a server in the form of a request
    message, beginning with a request-line that includes a method, URI,
    and protocol version (<a href="#section-3.1.1">Section 3.1.1</a>), followed by header fields
@@ -437,14 +448,14 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    metadata (<a href="#section-3.2">Section 3.2</a>), an empty line to indicate the end of the
    header section, and finally a message body containing the payload
    body (if any, <a href="#section-3.3">Section 3.3</a>).
+</p>
 
 
 
 
 
 
-
-
+<p>
    A server responds to a client's request by sending one or more HTTP
    response messages, each beginning with a status line that includes
    the protocol version, a success or error code, and textual reason
@@ -453,22 +464,28 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    (<a href="#section-3.2">Section 3.2</a>), an empty line to indicate the end of the header
    section, and finally a message body containing the payload body (if
    any, <a href="#section-3.3">Section 3.3</a>).
+</p>
 
+<p>
    A connection might be used for multiple request/response exchanges,
    as defined in <a href="#section-6.3">Section 6.3</a>.
+</p>
 
+<p>
    The following example illustrates a typical message exchange for a
    GET request (<a href="http://tools.ietf.org/html/rfc7231#section-4.3.1">Section&nbsp;4.3.1 of [RFC7231]</a>) on the URI
-   "http://www.example.com/hello.txt":
+  "http://www.example.com/hello.txt":</p>
 
+<p>
    Client request:
 
      GET /hello.txt HTTP/1.1
      User-Agent: curl/7.16.3 libcurl/7.16.3 OpenSSL/0.9.7l zlib/1.2.3
      Host: www.example.com
      Accept-Language: en, mi
+</p>
 
-
+<p>
    Server response:
 
      HTTP/1.1 200 OK
@@ -482,9 +499,12 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
      Content-Type: text/plain
 
      Hello World! My payload includes a trailing CRLF.
+</p>
+</section>
 
+<section>
 <span class="h3"><a class="selflink" name="section-2.2" href="#section-2.2">2.2</a>.  Implementation Diversity</span>
-
+<p>
    When considering the design of HTTP, it is easy to fall into a trap
    of thinking that all user agents are general-purpose browsers and all
    origin servers are large public websites.  That is not the case in
@@ -501,7 +521,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    units, configurable networking components, office machines,
    autonomous robots, news feeds, traffic cameras, ad selectors, and
    video-delivery platforms.
+</p>
 
+<p>
    The term "user agent" does not imply that there is a human user
    directly interacting with the software agent at the time of a
    request.  In many cases, a user agent is installed or configured to
@@ -510,7 +532,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    erroneous).  Spiders, for example, are typically given a start URI
    and configured to follow certain behavior while crawling the Web as a
    hypertext graph.
+</p>
 
+<p>
    The implementation diversity of HTTP means that not all user agents
    can make interactive suggestions to their user or provide adequate
    warning for security or privacy concerns.  In the few cases where
@@ -522,19 +546,27 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    unsafe action; confirmation does not imply any specific user
    interface or interruption of normal processing if the user has
    already made that choice.
+</p>
+</section>
 
+<section>
 <span class="h3"><a class="selflink" name="section-2.3" href="#section-2.3">2.3</a>.  Intermediaries</span>
 
+<p>
    HTTP enables the use of intermediaries to satisfy requests through a
    chain of connections.  There are three common forms of HTTP
    intermediary: proxy, gateway, and tunnel.  In some cases, a single
    intermediary might act as an origin server, proxy, gateway, or
    tunnel, switching behavior based on the nature of each request.
+</p>
 
+<pre>
             &gt;             &gt;             &gt;             &gt;
        UA =========== A =========== B =========== C =========== O
                   &lt;             &lt;             &lt;             &lt;
+</pre>
 
+<p>
    The figure above shows three intermediaries (A, B, and C) between the
    user agent and origin server.  A request or response message that
    travels the whole chain will pass through four separate connections.
@@ -554,14 +586,18 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    request.  Likewise, later requests might be sent through a different
    path of connections, often based on dynamic configuration for load
    balancing.
+</p>
 
+<p>
    The terms "upstream" and "downstream" are used to describe
    directional requirements in relation to the message flow: all
    messages flow from upstream to downstream.  The terms "inbound" and
    "outbound" are used to describe directional requirements in relation
    to the request route: "inbound" means toward the origin server and
    "outbound" means toward the user agent.
+</p>
 
+<p>
    A "proxy" is a message-forwarding agent that is selected by the
    client, usually via local configuration rules, to receive requests
    for some type(s) of absolute URI and attempt to satisfy those
@@ -574,7 +610,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    Some proxies are designed to apply transformations to selected
    messages or payloads while they are being forwarded, as described in
    <a href="#section-5.7.2">Section 5.7.2</a>.
+</p>
 
+<p>
    A "gateway" (a.k.a. "reverse proxy") is an intermediary that acts as
    an origin server for the outbound connection but translates received
    requests and forwards them inbound to another server or servers.
@@ -582,7 +620,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    information services, to improve server performance through
    "accelerator" caching, and to enable partitioning or load balancing
    of HTTP services across multiple machines.
+</p>
 
+<p>
    All HTTP requirements applicable to an origin server also apply to
    the outbound communication of a gateway.  A gateway communicates with
    inbound servers using any protocol that it desires, including private
@@ -590,7 +630,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    However, an HTTP-to-HTTP gateway that wishes to interoperate with
    third-party HTTP servers ought to conform to user agent requirements
    on the gateway's inbound connection.
+</p>
 
+<p>
    A "tunnel" acts as a blind relay between two connections without
    changing the messages.  Once active, a tunnel is not considered a
    party to the HTTP communication, though the tunnel might have been
@@ -599,11 +641,11 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    extend a virtual connection through an intermediary, such as when
    Transport Layer Security (TLS, [<a href="http://tools.ietf.org/html/rfc5246" title="&quot;The Transport Layer Security (TLS) Protocol Version 1.2&quot;">RFC5246</a>]) is used to establish
    confidential communication through a shared firewall proxy.
+</p>
 
 
 
-
-
+<p>
    The above categories for intermediary only consider those acting as
    participants in the HTTP communication.  There are also
    intermediaries that can act on lower layers of the network protocol
@@ -612,7 +654,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    indistinguishable (at a protocol level) from a man-in-the-middle
    attack, often introducing security flaws or interoperability problems
    due to mistakenly violating HTTP semantics.
+</p>
 
+<p>
    For example, an "interception proxy" [<a href="http://tools.ietf.org/html/rfc3040" title="&quot;Internet Web Replication and Caching Taxonomy&quot;">RFC3040</a>] (also commonly known
    as a "transparent proxy" [<a href="http://tools.ietf.org/html/rfc1919" title="&quot;Classical versus Transparent IP Proxies&quot;">RFC1919</a>] or "captive portal") differs from
    an HTTP proxy because it is not selected by the client.  Instead, an
@@ -622,7 +666,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    enforcing account subscription prior to allowing use of non-local
    Internet services, and within corporate firewalls to enforce network
    usage policies.
+</p>
 
+<p>
    HTTP is defined as a stateless protocol, meaning that each request
    message can be understood in isolation.  Many implementations depend
    on HTTP's stateless design in order to reuse proxied connections or
@@ -632,31 +678,39 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    specific to that agent.  Some non-standard HTTP extensions (e.g.,
    [<a href="http://tools.ietf.org/html/rfc4559" title="&quot;SPNEGO-based Kerberos and NTLM HTTP Authentication in Microsoft Windows&quot;">RFC4559</a>]) have been known to violate this requirement, resulting in
    security and interoperability problems.
+</p>
+</section>
 
+<section>
 <span class="h3"><a class="selflink" name="section-2.4" href="#section-2.4">2.4</a>.  Caches</span>
 
+<p>
    A "cache" is a local store of previous response messages and the
    subsystem that controls its message storage, retrieval, and deletion.
    A cache stores cacheable responses in order to reduce the response
    time and network bandwidth consumption on future, equivalent
    requests.  Any client or server MAY employ a cache, though a cache
    cannot be used by a server while it is acting as a tunnel.
+</p>
 
+<p>
    The effect of a cache is that the request/response chain is shortened
    if one of the participants along the chain has a cached response
    applicable to that request.  The following illustrates the resulting
    chain if B has a cached copy of an earlier response from O (via C)
    for a request that has not been cached by UA or A.
+</p>
 
+<pre>
                &gt;             &gt;
           UA =========== A =========== B - - - - - - C - - - - - - O
                      &lt;             &lt;
+</pre>
 
 
 
 
-
-
+<p>
    A response is "cacheable" if a cache is allowed to store a copy of
    the response message for use in answering subsequent requests.  Even
    when a response is cacheable, there might be additional constraints
@@ -664,16 +718,22 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    response can be used for a particular request.  HTTP requirements for
    cache behavior and cacheable responses are defined in <a href="http://tools.ietf.org/html/rfc7234#section-2">Section&nbsp;2 of
    [RFC7234]</a>.
+</p>
 
+<p>
    There is a wide variety of architectures and configurations of caches
    deployed across the World Wide Web and inside large organizations.
    These include national hierarchies of proxy caches to save
    transoceanic bandwidth, collaborative systems that broadcast or
    multicast cache entries, archives of pre-fetched cache entries for
    use in off-line or high-latency environments, and so on.
+</p>
+</section>
 
+<section>
 <span class="h3"><a class="selflink" name="section-2.5" href="#section-2.5">2.5</a>.  Conformance and Error Handling</span>
 
+<p>
    This specification targets conformance criteria according to the role
    of a participant in HTTP communication.  Hence, HTTP requirements are
    placed on senders, recipients, clients, servers, user agents,
@@ -682,14 +742,20 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    Additional (social) requirements are placed on implementations,
    resource owners, and protocol element registrations when they apply
    beyond the scope of a single communication.
+</p>
 
+<p>
    The verb "generate" is used instead of "send" where a requirement
    differentiates between creating a protocol element and merely
    forwarding a received element downstream.
+</p>
 
+<p>
    An implementation is considered conformant if it complies with all of
    the requirements associated with the roles it partakes in HTTP.
+</p>
 
+<p>
    Conformance includes both the syntax and semantics of protocol
    elements.  A sender MUST NOT generate protocol elements that convey a
    meaning that is known by that sender to be false.  A sender MUST NOT
@@ -698,7 +764,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    NOT generate protocol elements or syntax alternatives that are only
    allowed to be generated by participants in other roles (i.e., a role
    that the sender does not have for that message).
+</p>
 
+<p>
    When a received protocol element is parsed, the recipient MUST be
    able to parse any value of reasonable length that is applicable to
    the recipient's role and that matches the grammar defined by the
@@ -713,7 +781,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    forwarding a message might parse a header-field into generic
    field-name and field-value components, but then forward the header
    field without further parsing inside the field-value.
+</p>
 
+<p>
    HTTP does not have specific length limitations for many of its
    protocol elements because the lengths that might be appropriate will
    vary widely, depending on the deployment context and purpose of the
@@ -723,14 +793,18 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    commonly understood to be a reasonable length for some protocol
    elements has changed over the course of the past two decades of HTTP
    use and is expected to continue changing in the future.
+</p>
 
+<p>
    At a minimum, a recipient MUST be able to parse and process protocol
    element lengths that are at least as long as the values that it
    generates for those same protocol elements in other messages.  For
    example, an origin server that publishes very long URI references to
    its own resources needs to be able to parse and process those same
    references when received as a request target.
+</p>
 
+<p>
    A recipient MUST interpret a received protocol element according to
    the semantics defined for it by this specification, including
    extensions to this specification, unless the recipient has determined
@@ -740,7 +814,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    Accept-Encoding header field if inspection of the User-Agent header
    field indicates a specific implementation version that is known to
    fail on receipt of certain content codings.
+</p>
 
+<p>
    Unless noted otherwise, a recipient MAY attempt to recover a usable
    protocol element from an invalid construct.  HTTP does not define
    specific error handling mechanisms except when they have a direct
@@ -750,25 +826,32 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    Location header field doesn't parse according to the ABNF, whereas a
    systems control client might consider any form of error recovery to
    be dangerous.
+</p>
+</section>
 
+<section>
 <span class="h3"><a class="selflink" name="section-2.6" href="#section-2.6">2.6</a>.  Protocol Versioning</span>
-
+<p>
    HTTP uses a "&lt;major&gt;.&lt;minor&gt;" numbering scheme to indicate versions
    of the protocol.  This specification defines version "1.1".  The
    protocol version as a whole indicates the sender's conformance with
    the set of requirements laid out in that version's corresponding
    specification of HTTP.
+</p>
 
 
 
-
-
+<p>
    The version of an HTTP message is indicated by an HTTP-version field
    in the first line of the message.  HTTP-version is case-sensitive.
+</p>
 
+<pre>
      HTTP-version  = HTTP-name "/" DIGIT "." DIGIT
      HTTP-name     = %x48.54.54.50 ; "HTTP", case-sensitive
+</pre>
 
+<p>
    The HTTP version number consists of two decimal digits separated by a
    "." (period or decimal point).  The first digit ("major version")
    indicates the HTTP messaging syntax, whereas the second digit ("minor
@@ -779,7 +862,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    backwards-compatible subset of the protocol, thereby letting the
    recipient know that more advanced features can be used in response
    (by servers) or in future requests (by clients).
+</p>
 
+<p>
    When an HTTP/1.1 message is sent to an HTTP/1.0 recipient [<a href="http://tools.ietf.org/html/rfc1945" title="&quot;Hypertext Transfer Protocol -- HTTP/1.0&quot;">RFC1945</a>]
    or a recipient whose version is unknown, the HTTP/1.1 message is
    constructed such that it can be interpreted as a valid HTTP/1.0
@@ -788,7 +873,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    conformant sender will only use compatible features until it has
    determined, through configuration or the receipt of a message, that
    the recipient supports HTTP/1.1.
+</p>
 
+<p>
    The interpretation of a header field does not change between minor
    versions of the same major HTTP version, though the default behavior
    of a recipient in the absence of such a field can change.  Unless
@@ -796,12 +883,16 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    for all versions of HTTP/1.x.  In particular, the Host and Connection
    header fields ought to be implemented by all HTTP/1.x implementations
    whether or not they advertise conformance with HTTP/1.1.
+</p>
 
+<p>
    New header fields can be introduced without changing the protocol
    version if their defined semantics allow them to be safely ignored by
    recipients that do not recognize them.  Header field extensibility is
    discussed in <a href="#section-3.2.1">Section 3.2.1</a>.
+</p>
 
+<p>
    Intermediaries that process HTTP messages (i.e., all intermediaries
    other than those acting as tunnels) MUST send their own HTTP-version
    in forwarded messages.  In other words, they are not allowed to
@@ -819,26 +910,34 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    HTTP-version might result in communication errors when downstream
    recipients use the message sender's version to determine what
    features are safe to use for later communication with that sender.
+</p>
 
+<p>
    A client SHOULD send a request version equal to the highest version
    to which the client is conformant and whose major version is no
    higher than the highest version supported by the server, if this is
    known.  A client MUST NOT send a version to which it is not
    conformant.
+</p>
 
+<p>
    A client MAY send a lower request version if it is known that the
    server incorrectly implements the HTTP specification, but only after
    the client has attempted at least one normal request and determined
    from the response status code or header fields (e.g., Server) that
    the server improperly handles higher request versions.
+</p>
 
+<p>
    A server SHOULD send a response version equal to the highest version
    to which the server is conformant that has a major version less than
    or equal to the one received in the request.  A server MUST NOT send
    a version to which it is not conformant.  A server can send a 505
    (HTTP Version Not Supported) response if it wishes, for any reason,
    to refuse service of the client's major protocol version.
+</p>
 
+<p>
    A server MAY send an HTTP/1.0 response to a request if it is known or
    suspected that the client incorrectly implements the HTTP
    specification and is incapable of correctly processing later version
@@ -849,7 +948,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    unless triggered by specific client attributes, such as when one or
    more of the request header fields (e.g., User-Agent) uniquely match
    the values sent by a client known to be in error.
+</p>
 
+<p>
    The intention of HTTP's versioning design is that the major number
    will only be incremented if an incompatible message syntax is
    introduced, and that the minor number will only be incremented when
@@ -858,7 +959,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    However, the minor version was not incremented for the changes
    introduced between [<a href="http://tools.ietf.org/html/rfc2068" title="&quot;Hypertext Transfer Protocol -- HTTP/1.1&quot;">RFC2068</a>] and [<a href="http://tools.ietf.org/html/rfc2616" title="&quot;Hypertext Transfer Protocol -- HTTP/1.1&quot;">RFC2616</a>], and this revision has
    specifically avoided any such changes to the protocol.
+</p>
 
+<p>
    When an HTTP message is received with a major version number that the
    recipient implements, but a higher minor version number than what the
    recipient implements, the recipient SHOULD process the message as if
@@ -873,14 +976,19 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    has not yet indicated support for that higher version, is
    sufficiently backwards-compatible to be safely processed by any
    implementation of the same major version.
+</p>
+</section>
 
+<section>
 <span class="h3"><a class="selflink" name="section-2.7" href="#section-2.7">2.7</a>.  Uniform Resource Identifiers</span>
-
+<p>
    Uniform Resource Identifiers (URIs) [<a href="http://tools.ietf.org/html/rfc3986" title="&quot;Uniform Resource Identifier (URI): Generic Syntax&quot;">RFC3986</a>] are used throughout
    HTTP as the means for identifying resources (<a href="http://tools.ietf.org/html/rfc7231#section-2">Section&nbsp;2 of [RFC7231]</a>).
    URI references are used to target requests, indicate redirects, and
    define relationships.
+</p>
 
+<p>
    The definitions of "URI-reference", "absolute-URI", "relative-part",
    "scheme", "authority", "port", "host", "path-abempty", "segment",
    "query", and "fragment" are adopted from the URI generic syntax.  An
@@ -891,7 +999,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    paths that begin with "//".)  A "partial-URI" rule is defined for
    protocol elements that can contain a relative URI but not a fragment
    component.
+</p>
 
+<pre>
      URI-reference = &lt;URI-reference, see <a href="http://tools.ietf.org/html/rfc3986#section-4.1">[RFC3986], Section&nbsp;4.1</a>&gt;
      absolute-URI  = &lt;absolute-URI, see <a href="http://tools.ietf.org/html/rfc3986#section-4.3">[RFC3986], Section&nbsp;4.3</a>&gt;
      relative-part = &lt;relative-part, see <a href="http://tools.ietf.org/html/rfc3986#section-4.2">[RFC3986], Section&nbsp;4.2</a>&gt;
@@ -903,16 +1013,22 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
      segment       = &lt;segment, see <a href="http://tools.ietf.org/html/rfc3986#section-3.3">[RFC3986], Section&nbsp;3.3</a>&gt;
      query         = &lt;query, see <a href="http://tools.ietf.org/html/rfc3986#section-3.4">[RFC3986], Section&nbsp;3.4</a>&gt;
      fragment      = &lt;fragment, see <a href="http://tools.ietf.org/html/rfc3986#section-3.5">[RFC3986], Section&nbsp;3.5</a>&gt;
+</pre>
 
+<pre>
      absolute-path = 1*( "/" segment )
      partial-URI   = relative-part [ "?" query ]
+</pre>
 
+<p>
    Each protocol element in HTTP that allows a URI reference will
    indicate in its ABNF production whether the element allows any form
    of reference (URI-reference), only a URI in absolute form
    (absolute-URI), only the path and optional query components, or some
    combination of the above.  Unless otherwise indicated, URI references
    are parsed relative to the effective request URI (<a href="#section-5.5">Section 5.5</a>).
+</p>
+</section>
 
 
 
@@ -920,18 +1036,22 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
 
 
 
-
-
+<section>
 <span class="h4"><a class="selflink" name="section-2.7.1" href="#section-2.7.1">2.7.1</a>.  http URI Scheme</span>
 
+<p>
    The "http" URI scheme is hereby defined for the purpose of minting
    identifiers according to their association with the hierarchical
    namespace governed by a potential HTTP origin server listening for
    TCP ([<a href="http://tools.ietf.org/html/rfc0793" title="&quot;Transmission Control Protocol&quot;">RFC0793</a>]) connections on a given port.
+</p>
 
+<pre>
      http-URI = "http:" "//" authority path-abempty [ "?" query ]
                 [ "#" fragment ]
+</pre>
 
+<p>
    The origin server for an "http" URI is identified by the authority
    component, which includes a host identifier and optional TCP port
    (<a href="http://tools.ietf.org/html/rfc3986#section-3.2.2">[RFC3986], Section&nbsp;3.2.2</a>).  The hierarchical path component and
@@ -940,11 +1060,15 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    fragment component allows for indirect identification of a secondary
    resource, independent of the URI scheme, as defined in <a href="http://tools.ietf.org/html/rfc3986#section-3.5">Section&nbsp;3.5 of
    [RFC3986]</a>.
+</p>
 
+<p>
    A sender MUST NOT generate an "http" URI with an empty host
    identifier.  A recipient that processes such a URI reference MUST
    reject it as invalid.
+</p>
 
+<p>
    If the host identifier is provided as an IP address, the origin
    server is the listener (if any) on the indicated TCP port at that IP
    address.  If host is a registered name, the registered name is an
@@ -952,7 +1076,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    DNS, to find an address for that origin server.  If the port
    subcomponent is empty or not given, TCP port 80 (the reserved port
    for WWW services) is the default.
+</p>
 
+<p>
    Note that the presence of a URI with a given authority component does
    not imply that there is always an HTTP server listening for
    connections on that host and port.  Anyone can mint a URI.  What the
@@ -962,7 +1088,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    federated namespace, based on control over the indicated host and
    port, whether or not an HTTP server is present.  See <a href="#section-9.1">Section 9.1</a> for
    security considerations related to establishing authority.
+</p>
 
+<p>
    When an "http" URI is used within a context that calls for access to
    the indicated resource, a client MAY attempt access by resolving the
    host to an IP address, establishing a TCP connection to that address
@@ -978,7 +1106,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    HTTP response message, as described in <a href="http://tools.ietf.org/html/rfc7231#section-6">Section&nbsp;6 of [RFC7231]</a>, then
    that response is considered an authoritative answer to the client's
    request.
+</p>
 
+<p>
    Although HTTP is independent of the transport protocol, the "http"
    scheme is specific to TCP-based services because the name delegation
    process depends on TCP for establishing authority.  An HTTP service
@@ -988,7 +1118,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    secured connection.  Other protocols might also be used to provide
    access to "http" identified resources -- it is only the authoritative
    interface that is specific to TCP.
+</p>
 
+<p>
    The URI generic syntax for authority also includes a deprecated
    userinfo subcomponent (<a href="http://tools.ietf.org/html/rfc3986#section-3.2.1">[RFC3986], Section&nbsp;3.2.1</a>) for including user
    authentication information in the URI.  Some implementations make use
@@ -1002,24 +1134,34 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    reference received from an untrusted source, a recipient SHOULD parse
    for userinfo and treat its presence as an error; it is likely being
    used to obscure the authority for the sake of phishing attacks.
+</p>
+</section>
 
+<section>
 <span class="h4"><a class="selflink" name="section-2.7.2" href="#section-2.7.2">2.7.2</a>.  https URI Scheme</span>
 
+<p>
    The "https" URI scheme is hereby defined for the purpose of minting
    identifiers according to their association with the hierarchical
    namespace governed by a potential HTTP origin server listening to a
    given TCP port for TLS-secured connections ([<a href="http://tools.ietf.org/html/rfc5246" title="&quot;The Transport Layer Security (TLS) Protocol Version 1.2&quot;">RFC5246</a>]).
+</p>
 
+<p>
    All of the requirements listed above for the "http" scheme are also
    requirements for the "https" scheme, except that TCP port 443 is the
    default if the port subcomponent is empty or not given, and the user
    agent MUST ensure that its connection to the origin server is secured
    through the use of strong encryption, end-to-end, prior to sending
    the first HTTP request.
+</p>
 
+<pre>
      https-URI = "https:" "//" authority path-abempty [ "?" query ]
                  [ "#" fragment ]
+</pre>
 
+<p>
    Note that the "https" URI scheme depends on both TLS and TCP for
    establishing authority.  Resources made available via the "https"
    scheme have no shared identity with the "http" scheme even if their
@@ -1035,17 +1177,25 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    Cookie protocol [<a href="http://tools.ietf.org/html/rfc6265" title="&quot;HTTP State Management Mechanism&quot;">RFC6265</a>], can allow information set by one service
    to impact communication with other services within a matching group
    of host domains.
+</p>
 
+<p>
    The process for authoritative access to an "https" identified
    resource is defined in [<a href="http://tools.ietf.org/html/rfc2818" title="&quot;HTTP Over TLS&quot;">RFC2818</a>].
+</p>
+</section>
 
+<section>
 <span class="h4"><a class="selflink" name="section-2.7.3" href="#section-2.7.3">2.7.3</a>.  http and https URI Normalization and Comparison</span>
 
+<p>
    Since the "http" and "https" schemes conform to the URI generic
    syntax, such URIs are normalized and compared according to the
    algorithm defined in <a href="http://tools.ietf.org/html/rfc3986#section-6">Section&nbsp;6 of [RFC3986]</a>, using the defaults
    described above for each scheme.
+</p>
 
+<p>
    If the port is equal to the default port for a scheme, the normal
    form is to omit the port subcomponent.  When not being used in
    absolute form as the request target of an OPTIONS request, an empty
@@ -1056,15 +1206,20 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    than those in the "reserved" set are equivalent to their
    percent-encoded octets: the normal form is to not encode them (see
    Sections <a href="#section-2.1">2.1</a> and <a href="#section-2.2">2.2</a> of [<a href="http://tools.ietf.org/html/rfc3986" title="&quot;Uniform Resource Identifier (URI): Generic Syntax&quot;">RFC3986</a>]).
+</p>
 
+<p>
    For example, the following three URIs are equivalent:
 
       <a href="http://example.com:80/~smith/home.html">http://example.com:80/~smith/home.html</a>
       http://EXAMPLE.com/%7Esmith/home.html
       <a href="http://EXAMPLE.com:/%7esmith/home.html">http://EXAMPLE.com:/%7esmith/home.html</a>
+</p>
+</section>
 
 <span class="h2"><a class="selflink" name="section-3" href="#section-3">3</a>.  Message Format</span>
 
+<pre>
    All HTTP/1.1 messages consist of a start-line followed by a sequence
    of octets in a format similar to the Internet Message Format
    [<a href="http://tools.ietf.org/html/rfc5322" title="&quot;Internet Message Format&quot;">RFC5322</a>]: zero or more header fields (collectively referred to as
