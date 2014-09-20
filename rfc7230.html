@@ -389,10 +389,9 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    terminology and syntax productions used to define HTTP.
 </p>
 
-</section>
-
 <section>
-<span class="h3"><a class="selflink" name="section-2.1" href="#section-2.1">2.1</a>.  Client/Server Messaging</span>
+
+<h3 id="section-2.1"><a class="selflink" name="section-2.1" href="#section-2.1">2.1</a>.  Client/Server Messaging</h3>
 
 <p>
    HTTP is a stateless request/response protocol that operates by
@@ -476,16 +475,16 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    GET request (<a href="http://tools.ietf.org/html/rfc7231#section-4.3.1">Section&nbsp;4.3.1 of [RFC7231]</a>) on the URI
   "http://www.example.com/hello.txt":</p>
 
-<p>
+<pre>
    Client request:
 
      GET /hello.txt HTTP/1.1
      User-Agent: curl/7.16.3 libcurl/7.16.3 OpenSSL/0.9.7l zlib/1.2.3
      Host: www.example.com
      Accept-Language: en, mi
-</p>
+</pre>
 
-<p>
+<pre>
    Server response:
 
      HTTP/1.1 200 OK
@@ -499,11 +498,11 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
      Content-Type: text/plain
 
      Hello World! My payload includes a trailing CRLF.
-</p>
+</pre>
 </section>
 
 <section>
-<span class="h3"><a class="selflink" name="section-2.2" href="#section-2.2">2.2</a>.  Implementation Diversity</span>
+<h3 id="section-2.2"><a class="selflink" name="section-2.2" href="#section-2.2">2.2</a>.  Implementation Diversity</h3>
 <p>
    When considering the design of HTTP, it is easy to fall into a trap
    of thinking that all user agents are general-purpose browsers and all
@@ -550,7 +549,7 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
 </section>
 
 <section>
-<span class="h3"><a class="selflink" name="section-2.3" href="#section-2.3">2.3</a>.  Intermediaries</span>
+<h3 id="section-2.3"><a class="selflink" name="section-2.3" href="#section-2.3">2.3</a>.  Intermediaries</h3>
 
 <p>
    HTTP enables the use of intermediaries to satisfy requests through a
@@ -682,7 +681,7 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
 </section>
 
 <section>
-<span class="h3"><a class="selflink" name="section-2.4" href="#section-2.4">2.4</a>.  Caches</span>
+<h3 id="section-2.4"><a class="selflink" name="section-2.4" href="#section-2.4">2.4</a>.  Caches</h3>
 
 <p>
    A "cache" is a local store of previous response messages and the
@@ -731,7 +730,7 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
 </section>
 
 <section>
-<span class="h3"><a class="selflink" name="section-2.5" href="#section-2.5">2.5</a>.  Conformance and Error Handling</span>
+<h3 id="section-2.5"><a class="selflink" name="section-2.5" href="#section-2.5">2.5</a>.  Conformance and Error Handling</h3>
 
 <p>
    This specification targets conformance criteria according to the role
@@ -830,7 +829,7 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
 </section>
 
 <section>
-<span class="h3"><a class="selflink" name="section-2.6" href="#section-2.6">2.6</a>.  Protocol Versioning</span>
+<h3 id="section-2.6"><a class="selflink" name="section-2.6" href="#section-2.6">2.6</a>.  Protocol Versioning</h3>
 <p>
    HTTP uses a "&lt;major&gt;.&lt;minor&gt;" numbering scheme to indicate versions
    of the protocol.  This specification defines version "1.1".  The
@@ -980,7 +979,7 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
 </section>
 
 <section>
-<span class="h3"><a class="selflink" name="section-2.7" href="#section-2.7">2.7</a>.  Uniform Resource Identifiers</span>
+<h3 id="section-2.7"><a class="selflink" name="section-2.7" href="#section-2.7">2.7</a>.  Uniform Resource Identifiers</h3>
 <p>
    Uniform Resource Identifiers (URIs) [<a href="http://tools.ietf.org/html/rfc3986" title="&quot;Uniform Resource Identifier (URI): Generic Syntax&quot;">RFC3986</a>] are used throughout
    HTTP as the means for identifying resources (<a href="http://tools.ietf.org/html/rfc7231#section-2">Section&nbsp;2 of [RFC7231]</a>).
@@ -1028,16 +1027,13 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
    combination of the above.  Unless otherwise indicated, URI references
    are parsed relative to the effective request URI (<a href="#section-5.5">Section 5.5</a>).
 </p>
-</section>
-
-
 
 
 
 
 
 <section>
-<span class="h4"><a class="selflink" name="section-2.7.1" href="#section-2.7.1">2.7.1</a>.  http URI Scheme</span>
+<h4 id="section-2.7.1"><a class="selflink" name="section-2.7.1" href="#section-2.7.1">2.7.1</a>.  http URI Scheme</h4>
 
 <p>
    The "http" URI scheme is hereby defined for the purpose of minting
@@ -1138,7 +1134,7 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
 </section>
 
 <section>
-<span class="h4"><a class="selflink" name="section-2.7.2" href="#section-2.7.2">2.7.2</a>.  https URI Scheme</span>
+<h4 id="section-2.7.2"><a class="selflink" name="section-2.7.2" href="#section-2.7.2">2.7.2</a>.  https URI Scheme</h4>
 
 <p>
    The "https" URI scheme is hereby defined for the purpose of minting
@@ -1186,7 +1182,7 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
 </section>
 
 <section>
-<span class="h4"><a class="selflink" name="section-2.7.3" href="#section-2.7.3">2.7.3</a>.  http and https URI Normalization and Comparison</span>
+<h4 id="section-2.7.3"><a class="selflink" name="section-2.7.3" href="#section-2.7.3">2.7.3</a>.  http and https URI Normalization and Comparison</h4>
 
 <p>
    Since the "http" and "https" schemes conform to the URI generic
@@ -1215,6 +1211,8 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
       http://EXAMPLE.com/%7Esmith/home.html
       <a href="http://EXAMPLE.com:/%7esmith/home.html">http://EXAMPLE.com:/%7esmith/home.html</a>
 </p>
+</section>
+</section>
 </section>
 
 <span class="h2"><a class="selflink" name="section-3" href="#section-3">3</a>.  Message Format</span>
