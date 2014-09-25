@@ -382,7 +382,13 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
 <section>
 <h2 id="section-2">2. <span lang="ja">アーキテクチャ</span><span lang="en">Architecture</span></h2>
 
-<p>
+<p lang="ja">
+   HTTPは、World Wide Web(ワールドワイドウェブ、略称：WWW)のアーキテクチャのために作られ、
+世界的なハイパーテキストシステムに必要な拡張性を支えるために、時間とともに発展してきた。
+そのほとんどのアーキテクチャは、HTTPを定義するために用いられる用語や構文生成に反映されている。
+</p>
+
+<p lang="en">
    HTTP was created for the World Wide Web (WWW) architecture and has
    evolved over time to support the scalability needs of a worldwide
    hypertext system.  Much of that architecture is reflected in the
@@ -391,9 +397,17 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
 
 <section>
 
-<h3 id="section-2.1">2.1. <span>Client/Server Messaging</span></h3>
+  <h3 id="section-2.1">2.1. <span lang="ja">クライアント/サーバー メッセージング</span>
+<span lang="en">Client/Server Messaging</span></h3>
 
-<p>
+<p lang="ja">
+   HTTPは、確かな通信もしくは"コネクション"（<a href="#section-6">セクション 6</a>）というセッション層に渡り
+メッセージを交換する（<a href="#section-3">セクション 3</a>）、ステートレスなリクエストもしくはレスポンスプロトコルである。
+HTTPクライアントは、一つかそれ以上のHTTPリクエストを送信するために、サーバーとのコネクションを確立するプログラムである。
+HTTPサーバーは、HTTPレスポンスを送信することによって、HTTPリクエストを処理するためにコネクションを許可するプログラムである。
+</p>
+
+<p lang="en">
    HTTP is a stateless request/response protocol that operates by
    exchanging messages (<a href="#section-3">Section 3</a>) across a reliable transport- or
    session-layer "connection" (<a href="#section-6">Section 6</a>).  An HTTP "client" is a
