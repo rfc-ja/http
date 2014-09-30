@@ -397,9 +397,18 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
 
 <section>
 
-<h3 id="section-2.1">2.1. <span>Client/Server Messaging</span></h3>
+<h3 id="section-2.1">2.1. <span lang="ja">クライアント/サーバー メッセージング</span>
+<span lang="en">Client/Server Messaging</span></h3>
 
-<p>
+<p lang="ja">
+   HTTPは、信頼性のあるトランスポート層またはセッション層の"コネクション"（<a href="#section-6">セクション 6</a>）の上で
+メッセージ（<a href="#section-3">セクション 3</a>）を交換することによって動作する、
+ステートレスなリクエスト-レスポンス型のプロトコルである。HTTP"クライアント"は、一つ以上のHTTPリクエストを送信する目的で、
+サーバーとのコネクションを確立するプログラムである。HTTP"サーバー"は、HTTPレスポンスを送信することによって
+HTTPリクエストに対応するために、コネクションを受け入れるプログラムである。
+</p>
+
+<p lang="en">
    HTTP is a stateless request/response protocol that operates by
    exchanging messages (<a href="#section-3">Section 3</a>) across a reliable transport- or
    session-layer "connection" (<a href="#section-6">Section 6</a>).  An HTTP "client" is a
