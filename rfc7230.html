@@ -418,7 +418,17 @@ HTTPリクエストに対応するために、コネクションを受け入れ�
    HTTP responses.
 </p>
 
-<p>
+<p lang="ja">
+   "クライアント"ならびに"サーバー"という用語は、これらのプログラムがある特定のコネクションに関して果たす役割を指すだけである。
+同じプログラムが、あるコネクションに対してはクライアントとして、その他のコネクションに対してはサーバーとして動作するかもしれない。
+"ユーザーエージェント"という用語は、ブラウザ、スパイダー（ウェブベースのロボット）、コマンドラインツール、
+カスタムアプリケーション、そしてモバイルアプリケーションらを含む（しかしそれらに限定されない）、
+リクエストを始める様々なクライアントプログラムのいずれかを指す。"オリジンサーバー"という用語は、
+あるターゲットリソースに関して、権威のあるレスポンスを起せるプログラムを指す。
+"センダー"と"レシピエント"はそれぞれ、メッセージを送る・受け取る何らかの実装を指す。
+</p>
+
+<p lang="en">
    The terms "client" and "server" refer only to the roles that these
    programs perform for a particular connection.  The same program might
    act as a client on some connections and a server on others.  The term
