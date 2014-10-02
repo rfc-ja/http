@@ -441,7 +441,19 @@ HTTPリクエストに対応するために、コネクションを受け入れ�
    or receives a given message, respectively.
 </p>
 
-<p>
+<p lang="ja">
+   HTTPは、ターゲットリソース（<a href="#section-5.1">セクション 5.1</a>）とリソース同士の関係を示すために、
+Uniform Resource Identifier（URI）基準[<a href="http://tools.ietf.org/html/rfc3986" 
+title="&quot;Uniform Resource Identifier (URI): Generic Syntax&quot;">RFC3986</a>]に依存する。
+メッセージは、インターネットメール[<a href="http://tools.ietf.org/html/rfc5322" 
+title="&quot;Internet Message Format&quot;">RFC5322</a>]とMultipurpose Internet Mail Extensions (MIME) 
+[<a href="http://tools.ietf.org/html/rfc2045" title="&quot;Multipurpose Internet Mail Extensions (MIME) 
+Part One: Format of Internet Message Bodies&quot;">RFC2045</a>]
+に使われるものに似たフォーマットでやりとりされる（HTTPとMIMEメッセージの違いについては、
+<a href="http://tools.ietf.org/html/rfc7231#appendix-A">[RFC7231]の付録 A </a>を参照）。
+</p>
+
+<p lang="en">
    HTTP relies upon the Uniform Resource Identifier (URI) standard
    [<a href="http://tools.ietf.org/html/rfc3986" title="&quot;Uniform Resource Identifier (URI): Generic Syntax&quot;">RFC3986</a>] to indicate the target resource (<a href="#section-5.1">Section 5.1</a>) and
    relationships between resources.  Messages are passed in a format
