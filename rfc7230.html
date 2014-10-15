@@ -505,7 +505,16 @@ Part One: Format of Internet Message Bodies&quot;">RFC2045</a>]
 
 
 
-<p>
+<p lang="ja">
+   サーバーは、クライアントのリクエストに一つ以上のHTTPレスポンスメッセージを送信することで応答する。
+各レスポンスメッセージは、プロトコルバージョン、成功やエラーを示すコード、そしてテキストでの理由フレーズ
+を含むステータスライン（<a href="#section-3.1.2">セクション 3.1.2</a>）で始まる。
+次に、サーバー情報、リソースメタデータ、表現メタデータを含むヘッダーフィールド（<a href="#section-3.2">セクション 3.2</a>）
+が続くことがある。次に、ヘッダーセクションの終了を示す空行が続く。
+そして最後に、ペイロードボディを含むメッセージボディ（もしあるなら、<a href="#section-3.3">セクション 3.3</a>）が続く。
+</p>
+
+<p lang="en">
    A server responds to a client's request by sending one or more HTTP
    response messages, each beginning with a status line that includes
    the protocol version, a success or error code, and textual reason
