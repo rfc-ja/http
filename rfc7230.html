@@ -574,8 +574,17 @@ Part One: Format of Internet Message Bodies&quot;">RFC2045</a>]
 </section>
 
 <section>
-<h3 id="section-2.2">2.2. <span lang="ja">実装の多様性</span><span lang="en">Implementation Diversity</span></h3>
-<p>
+<h3 id="section-2.2">2.2. <span>Implementation Diversity</span></h3>
+<p lang="ja">
+   HTTPの設計を考慮する場合、全てのユーザーエージェントは汎用のブラウザであり、
+全てのオリジンサーバーは大きな公のウェブサイトであると考える罠に陥りやすい。実際には、これは誤りである。
+よくあるユーザーエージェントには、家庭の電化製品、ステレオ、体重計、ファームウエアアップデートスクリプト、
+コマンドラインプログラム、モバイルアプリケーション、様々な形や大きさの通信機器を含む。
+同様に、よくあるHTTPオリジンサーバーは、家庭のオートメーションユニット、設定可能なネットワークコンポーネント、
+オフィス機器、自律ロボット、ニュースフィード、交通カメラ、広告セレクタ、そしてビデオ配信プラットフォームを含む。
+</p>
+
+<p lang="en">
    When considering the design of HTTP, it is easy to fall into a trap
    of thinking that all user agents are general-purpose browsers and all
    origin servers are large public websites.  That is not the case in
