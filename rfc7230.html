@@ -622,7 +622,18 @@ Part One: Format of Internet Message Bodies&quot;">RFC2045</a>]
    hypertext graph.
 </p>
 
-<p>
+<p lang="ja">
+   HTTPの実装に多様性があるということは、全てのユーザーエージェントがそのユーザーに対してインタラクティブに
+サジェストできるわけではなく、セキュリティやプライバシー上重要な事柄に関係する適切な警告を提供できるというわけではない。
+この仕様がユーザーに対してエラーレポーティングが要求される場合があって、そのいくつかの場合において、
+そのようなレポーティングがエラーコンソールもしくはログファイルでしか閲覧できないことは許容される。
+同様に、進む前にユーザーによって確認されなければならない自動的なアクションの要件は、前もった設定の選択、実行時の選択肢、
+もしくは単純に安全ではないアクションを回避することを通じて満たされるかもしれない。
+ユーザーが既にその選択を行ったのなら、確認というのは、いかなる特定のユーザーインターフェースもしくは
+正常処理への割り込みをも意味しない。
+</p>
+
+<p lang="en">
    The implementation diversity of HTTP means that not all user agents
    can make interactive suggestions to their user or provide adequate
    warning for security or privacy concerns.  In the few cases where
