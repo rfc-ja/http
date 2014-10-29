@@ -603,15 +603,7 @@ Part One: Format of Internet Message Bodies&quot;">RFC2045</a>]
    video-delivery platforms.
 </p>
 
-<p lang="ja">
-   "ユーザーエージェント"という用語は、リクエスト時に直接ソフトウエアエージェントと接している人間のユーザーがいることを意味しない。
-多くの場合、ユーザーエージェントはバックグラウンドで実行され、後の検査のためにその結果を保存する
-（または、結果のうち関心のあるか問題がある部分だけを保存する）目的でインストールされたり構成されたりしている。
-例えばスパイダーは、典型的には開始URIが与えられ、ハイパーテキストグラフとしてのウェブを徘徊している間に、
-特定の振る舞いをするよう構成される。
-</p>
-
-<p lang="en">
+<p>
    The term "user agent" does not imply that there is a human user
    directly interacting with the software agent at the time of a
    request.  In many cases, a user agent is installed or configured to
@@ -640,7 +632,14 @@ Part One: Format of Internet Message Bodies&quot;">RFC2045</a>]
 <section>
 <h3 id="section-2.3">2.3. <span>Intermediaries</span></h3>
 
-<p>
+<p lang="ja">
+   HTTPは、連続するコネクションを通じたリクエストを満たすために、仲介の使用を可能にする。
+HTTPの仲介には、プロキシ、ゲートウェイ、そしてトンネルという、3つの一般的な形がある。
+状況によって、単一の仲介は、オリジンサーバ−として、プロキシとして、ゲートウェイとして、または
+トンネルとして、各リクエストの性質によって振る舞いを変えながら実行されるかもしれない。
+</p>
+
+<p lang="en">
    HTTP enables the use of intermediaries to satisfy requests through a
    chain of connections.  There are three common forms of HTTP
    intermediary: proxy, gateway, and tunnel.  In some cases, a single
