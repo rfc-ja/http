@@ -643,7 +643,14 @@ Part One: Format of Internet Message Bodies&quot;">RFC2045</a>]
 <section>
 <h3 id="section-2.3">2.3. <span lang="ja">中継者</span><span lang="en">Intermediaries</span></h3>
 
-<p>
+<p lang="ja">
+   HTTPは、コネクションの連鎖を通じたリクエストを満たすために、中継の使用を可能にする。
+HTTPの中継には、プロキシ、ゲートウェイ、そしてトンネルという、3つの一般的な形がある。
+場合によって、単一の中継者が、各リクエストの性質によって振る舞いを変えながら、オリジンサーバーとして、
+プロキシとして、ゲートウェイとして、またはトンネルとして動作するかもしれない。
+</p>
+
+<p lang="en">
    HTTP enables the use of intermediaries to satisfy requests through a
    chain of connections.  There are three common forms of HTTP
    intermediary: proxy, gateway, and tunnel.  In some cases, a single
