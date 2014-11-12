@@ -664,7 +664,18 @@ HTTPの中継には、プロキシ、ゲートウェイ、そしてトンネル�
                   &lt;             &lt;             &lt;             &lt;
 </pre>
 
-<p>
+<p lang="ja">
+   上の図は、ユーザーエージェントとオリジンサーバー間の3つの中継者（A、B、そしてC）を示す。
+連鎖全体を進むリクエストメッセージもしくはレスポンスメッセージは、4つの別々のコネクションを通過する。
+HTTP通信オプションは、最も近くのトンネルではない隣接した中継者とのコネクションのみに適用される場合も、
+連鎖の端点のみに適用される場合も、また、連鎖を成す全てのコネクションに適用される場合もある。
+この図は直線的であるが、関係する各参加者は、複数の通信に同時に関わるかもしれない。例えばBは、
+Aのリクエストを扱うと同時に、多くのA以外のクライアントからリクエストを受信しているかもしれないし、
+同時にリクエストをC以外のサーバーに転送しているかもしれない。同様に、これよりも後のリクエストは、
+しばしばロードバランシングの動的構成にしたがって、違ったコネクション経路を通じて送信されるかもしれない。
+</p>
+
+<p lang="en">
    The figure above shows three intermediaries (A, B, and C) between the
    user agent and origin server.  A request or response message that
    travels the whole chain will pass through four separate connections.
