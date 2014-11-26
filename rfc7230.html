@@ -757,7 +757,14 @@ HTTPインターフェースを通じた変換によってこのリクエスト�
    of HTTP services across multiple machines.
 </p>
 
-<p>
+<p lang="ja">
+  オリジンサーバーにあてはまる全てのHTTP要件は、ゲートウェイのアウトバウンド通信にもあてはまる。ゲートウェイは、
+それがどんなプロトコルでも使用してインバウンドサーバーと通信する。そのプロトコルには、この仕様のスコープから
+外れるHTTPへの個人的な拡張も含まれる。しかし、サードパーティのHTTPサーバーとの相互運用を望むHTTPからHTTPへのゲートウェイは、
+ゲートウェイのインバウンドコネクションに対するユーザーエージェント要件に従うべきである。
+</p>
+
+<p lang="en">
    All HTTP requirements applicable to an origin server also apply to
    the outbound communication of a gateway.  A gateway communicates with
    inbound servers using any protocol that it desires, including private
