@@ -739,15 +739,7 @@ HTTPインターフェースを通じた変換によってこのリクエスト�
    <a href="#section-5.7.2">Section 5.7.2</a>.
 </p>
 
-<p lang="ja">
-  "ゲートウェイ" （"リバースプロキシ"としても知られる）は、アウトバウンドコネクションに関して
-オリジンサーバーとして動作する中継者である。しかし、ゲートウェイは受け取ったリクエストを変換し、
-他のサーバー（もしくは、サーバー群）へ、インバウンドに転送する。しばしばゲートウェイは、レガシーな情報サービスや
-信頼性のない情報サービスを隠蔽するため、"アクセラレータ"キャッシングを通じてサーバーのパフォーマンスを改善するため、
-そして複数のマシンにまたがったHTTPサービスのパーティショニングもしくはロードバランシングを可能にするために使用される。
-</p>
-
-<p lang="en">
+<p>
    A "gateway" (a.k.a. "reverse proxy") is an intermediary that acts as
    an origin server for the outbound connection but translates received
    requests and forwards them inbound to another server or servers.
@@ -774,7 +766,17 @@ HTTPインターフェースを通じた変換によってこのリクエスト�
    on the gateway's inbound connection.
 </p>
 
-<p>
+<p lang="ja">
+"トンネル"は、二つのコネクションの間をメッセージを変えずに盲目のリレーとして動作する。
+一旦動作に入ると、トンネルは、HTTPリクエストによって発動されたとしても、HTTP通信の参加者とはみなされない。
+トンネルは、リレーされたコネクションの両端が閉じられるとその存在を終える。トンネルは、中継者を通じて仮想のコネクションを
+広げるために使用される。共有のファイアウォールプロキシを通じた機密通信を確立するために
+トランスポートレイヤーセキュリティ（TLS, [<a href="http://tools.ietf.org/html/rfc5246" 
+title="&quot;The Transport Layer Security (TLS) Protocol Version 1.2&quot;">RFC5246</a>]）
+が使用される場合などである。
+</p>
+
+<p lang="en">
    A "tunnel" acts as a blind relay between two connections without
    changing the messages.  Once active, a tunnel is not considered a
    party to the HTTP communication, though the tunnel might have been
