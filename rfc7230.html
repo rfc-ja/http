@@ -800,7 +800,17 @@ title="&quot;The Transport Layer Security (TLS) Protocol Version 1.2&quot;">RFC5
    due to mistakenly violating HTTP semantics.
 </p>
 
-<p>
+<p lang="ja">
+   例えば、"横取りプロキシ" [<a href="http://tools.ietf.org/html/rfc3040" title="&quot;Internet Web Replication 
+and Caching Taxonomy&quot;">RFC3040</a>]（"透過プロキシ" [<a href="http://tools.ietf.org/html/rfc1919" 
+title="&quot;Classical versus Transparent IP Proxies&quot;">RFC1919</a>] もしくは"キャプティブポータル"としても
+知られる）は、クライアントに選択されないので、HTTPプロキシとは違っている。代わりに、横取りプロキシは、TCPポート80（時折、
+他の一般的なポートトラフィック）へ宛てられたパケットをフィルターもしくはリダイレクトする。横取りプロキシは、
+一般的に公共のネットワークアクセスポイントで見られる。ローカルではないインターネットサービスを使用させる
+前段階でのアカウント作成を強制したり、企業ファイアウォール内でネットワーク使用のポリシーを強制するためだったりする。
+</p>
+
+<p lang="en">
    For example, an "interception proxy" [<a href="http://tools.ietf.org/html/rfc3040" title="&quot;Internet Web Replication and Caching Taxonomy&quot;">RFC3040</a>] (also commonly known
    as a "transparent proxy" [<a href="http://tools.ietf.org/html/rfc1919" title="&quot;Classical versus Transparent IP Proxies&quot;">RFC1919</a>] or "captive portal") differs from
    an HTTP proxy because it is not selected by the client.  Instead, an
