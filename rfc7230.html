@@ -838,7 +838,14 @@ title="&quot;Classical versus Transparent IP Proxies&quot;">RFC1919</a>] もし�
 <section>
 <h3 id="section-2.4">2.4. <span>Caches</span></h3>
 
-<p>
+<p lang="ja">
+   "キャッシュ"は、前のレスポンスメッセージのローカル保存とそのメッセージの保存、復旧、そして削除をコントロールするサブシステム
+である。キャッシュは、レスポンス（同様にリクエスト）にかかる時間といく先のネットワーク帯域を削減する目的で、キャッシュ可能な
+レスポンスを保存する。どんなクライアントやサーバーも、キャッシュを導入してもよい。ただし、キャッシュがトンネルとして動作
+している間はサーバーに使用されることはできない。
+</p>
+
+<p lang="en">
    A "cache" is a local store of previous response messages and the
    subsystem that controls its message storage, retrieval, and deletion.
    A cache stores cacheable responses in order to reduce the response
