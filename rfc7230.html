@@ -787,9 +787,15 @@ title="&quot;The Transport Layer Security (TLS) Protocol Version 1.2&quot;">RFC5
    confidential communication through a shared firewall proxy.
 </p>
 
+<p lang="ja">
+   中継者に関する上記のカテゴリは、HTTP通信の参加者として動作する中継者のみを考慮している。
+メッセージ送信者についての知識も許可もなくHTTPトラフィックをフィルターしたりリダイレクトしたりして、
+ネットワークプロトコルスタックのより下の層で動作しうる中継者もある。ネットワーク中継者は、中間者攻撃から
+（プロトコルレベルでは）区別できない。この中継者はしばしば、セキュリティの欠陥や誤ってHTTPセマンティクスを
+破ることによる相互運用問題をもたらす。
+</p>
 
-
-<p>
+<p lang="en">
    The above categories for intermediary only consider those acting as
    participants in the HTTP communication.  There are also
    intermediaries that can act on lower layers of the network protocol
