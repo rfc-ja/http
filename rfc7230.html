@@ -860,7 +860,13 @@ title="&quot;Classical versus Transparent IP Proxies&quot;">RFC1919</a>] もし�
    cannot be used by a server while it is acting as a tunnel.
 </p>
 
-<p>
+<p lang="ja">
+   キャッシュの効果とは、もしリクエスト/レスポンス連鎖に沿った参加者の一人がリクエストにあてはまるキャッシュされた
+レスポンスを持っているなら、この連鎖が短縮されることにある。次に示すのは、もしBが、（UAにもAにもキャッシュされていない）
+リクエストに関する（C経由で）Oから来た以前のレスポンスのキャッシュコピーを持っている場合に起こる連鎖である。
+</p>
+
+<p lang="en">
    The effect of a cache is that the request/response chain is shortened
    if one of the participants along the chain has a cached response
    applicable to that request.  The following illustrates the resulting
