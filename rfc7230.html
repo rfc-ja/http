@@ -893,7 +893,15 @@ title="&quot;SPNEGO-based Kerberos and NTLM HTTP Authentication in Microsoft Win
 
 
 
-<p>
+<p lang="ja">
+   レスポンスが"キャッシュ可能"であるのは、続けて起こるリクエストに答える用途でそのレスポンスメッセージのコピーを
+キャッシュが保存できる場合である。レスポンスメッセージがキャッシュ可能の場合でも、追加の制約があるかもしれない。
+この制約は、そのキャッシュされたレスポンスが特定のリクエストに関して使用可能である場合に、クライアントによって置かれたり
+オリジンサーバ-によって置かれる。キャッシュの動作やキャッシュ可能なレスポンスに関するHTTPの要件は、
+<a href="http://tools.ietf.org/html/rfc7234#section-2">[RFC7234]のセクション2</a>で定義される。
+</p>
+
+<p lang="en">
    A response is "cacheable" if a cache is allowed to store a copy of
    the response message for use in answering subsequent requests.  Even
    when a response is cacheable, there might be additional constraints
