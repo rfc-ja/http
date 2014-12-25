@@ -833,9 +833,10 @@ title="&quot;Classical versus Transparent IP Proxies&quot;">RFC1919</a>] もし�
 多くの実装は、プロキシを介したコネクションを再利用するために、または複数のサーバーにまたがったリクエストを
 動的にロードバランスするために、HTTPのステートレス設計に依存している。故に、サーバーは、コネクションがセキュアで
 そのエージェントに固有である場合を除き、同じコネクション上の二つのリクエストは同じユーザーエージェントから送信された
-と決めてかかってはいけない。いくつかの標準ではないHTTP拡張（例えば、[<a href="http://tools.ietf.org/html/rfc4559" 
-title="&quot;SPNEGO-based Kerberos and NTLM HTTP Authentication in Microsoft Windows&quot;">RFC4559</a>]）は、
-この要件を破っていることが知られており、セキュリティや相互運用問題を起こす。
+と決めてかかっては<em title="MUST NOT">ならない</em>。いくつかの標準ではないHTTP拡張（例えば、
+[<a href="http://tools.ietf.org/html/rfc4559" title="&quot;SPNEGO-based Kerberos and NTLM HTTP 
+Authentication in Microsoft Windows&quot;">RFC4559</a>]）は、この要件を破っていることが知られており、
+セキュリティや相互運用問題を起こす。
 </p>
 
 <p lang="en">
@@ -857,7 +858,7 @@ title="&quot;SPNEGO-based Kerberos and NTLM HTTP Authentication in Microsoft Win
 <p lang="ja">
    "キャッシュ" とは、以前のレスポンスメッセージのローカルな保管庫とそのメッセージの保存、取り出し、そして削除をコントロールする
 サブシステムである。キャッシュは、将来の等価なリクエストに関してレスポンスにかかる時間とネットワーク帯域の消費を削減する目的で、
-キャッシュ可能なレスポンスを保存する。どんなクライアントやサーバーも、キャッシュを導入してもよい。ただし、
+キャッシュ可能なレスポンスを保存する。どんなクライアントやサーバーも、キャッシュを導入<em title="MAY">してもよい</em>。ただし、
 サーバーがトンネルとして動作している間はそのサーバーがキャッシュを使用することはできない。
 </p>
 
