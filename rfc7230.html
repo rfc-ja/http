@@ -991,7 +991,15 @@ Conformance and Error Handling</span></h3>
    that the sender does not have for that message).
 </p>
 
-<p>
+<p lang="ja">
+   受信したプロトコル要素をパースするとき、受信者は、自身の役割にあてはまり、対応するABNF規則で定義された文法に一致する、
+正当な長さのどんな値もパースでき<em title="MUST">なければはならない</em>。しかし、いくつかの受信したプロトコル要素は、
+パースされないかもしれないことに注目せよ。例えば、メッセージを転送する中継者は、ヘッダーフィールドをジェネリックな
+フィールド名コンポーネントやフィールド値コンポーネントへとパースするかもしれないが、その時、フィールド値内を更にパースする
+ことなくヘッダーフィールドを転送するかもしれない。
+</p>
+
+<p lang="en">
    When a received protocol element is parsed, the recipient MUST be
    able to parse any value of reasonable length that is applicable to
    the recipient's role and that matches the grammar defined by the
