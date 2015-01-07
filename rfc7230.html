@@ -1029,7 +1029,15 @@ Conformance and Error Handling</span></h3>
    references when received as a request target.
 </p>
 
-<p>
+<p lang="ja">
+  受信者は、自身が（経験や設定を通じて）セマンティクスで暗示されたその送信者の実装が間違っていると判断したのでなければ、
+受信したプロトコル要素をこの仕様（この仕様への拡張を含む）によってその要素のために定義されたセマンティクスに応じて解釈
+<em title="MUST">しなければならない</em>。例えば、オリジンサーバーは、User-Agentヘッダーフィールドの発端が
+特定のコーディング内容の受信において失敗するとわかっている実装バージョンを示す場合、受信したAccept-Encoding
+ヘッダーの内容を無視するかもしれない。
+</p>
+
+<p lang="en">
    A recipient MUST interpret a received protocol element according to
    the semantics defined for it by this specification, including
    extensions to this specification, unless the recipient has determined
