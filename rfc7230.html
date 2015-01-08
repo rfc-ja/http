@@ -1008,7 +1008,14 @@ Conformance and Error Handling</span></h3>
    field without further parsing inside the field-value.
 </p>
 
-<p>
+<p lang="ja">
+   HTTPは、そのプロトコル要素の多くに関して長さの限界を持たない。なぜなら、適切な長さは、
+配備の文脈や実装の目的に応じて幅広く変化するからである。よって、送信者と受信者の間の相互運用性は、
+どんな長さが各プロトコル要素にとって妥当であるかという共有された期待に依存する。更に、いくつかのプロトコル要素について
+妥当な長さとして一般に理解されているものは、過去20年間のHTTPの利用を通じて変化してきたうえに、これからも変化し続けると考えられる。
+</p>
+
+<p lang="en">
    HTTP does not have specific length limitations for many of its
    protocol elements because the lengths that might be appropriate will
    vary widely, depending on the deployment context and purpose of the
