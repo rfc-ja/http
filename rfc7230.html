@@ -1027,7 +1027,14 @@ Conformance and Error Handling</span></h3>
    use and is expected to continue changing in the future.
 </p>
 
-<p>
+<p lang="ja">
+  最小でも、受信者は、他のメッセージでは、これら同じプロトコル要素を生成する値と少なくとも同じ長さの
+プロトコル要素の長さをパースならびに処理でき<em title="MUST">なければならない。</em>
+例えば、とても長い自身のリソースへのURI参照を発行するオリジンサーバーは、リクエストターゲットとして受信した場合、
+これら同じ参照をパースならびに処理できる必要がある。
+</p>
+
+<p lang="en">
    At a minimum, a recipient MUST be able to parse and process protocol
    element lengths that are at least as long as the values that it
    generates for those same protocol elements in other messages.  For
