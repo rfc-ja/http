@@ -833,10 +833,9 @@ title="&quot;Classical versus Transparent IP Proxies&quot;">RFC1919</a>] もし�
 多くの実装は、プロキシを介したコネクションを再利用するために、または複数のサーバーにまたがったリクエストを
 動的にロードバランスするために、HTTPのステートレス設計に依存している。故に、サーバーは、コネクションがセキュアで
 そのエージェントに固有である場合を除き、同じコネクション上の二つのリクエストは同じユーザーエージェントから送信された
-と決めてかかっては<em title="MUST NOT">ならない</em>。いくつかの標準ではないHTTP拡張（例えば、
-[<a href="http://tools.ietf.org/html/rfc4559" title="&quot;SPNEGO-based Kerberos and NTLM HTTP 
-Authentication in Microsoft Windows&quot;">RFC4559</a>]）は、この要件を破っていることが知られており、
-セキュリティや相互運用問題を起こす。
+と決めてかかってはいけない。いくつかの標準ではないHTTP拡張（例えば、[<a href="http://tools.ietf.org/html/rfc4559" 
+title="&quot;SPNEGO-based Kerberos and NTLM HTTP Authentication in Microsoft Windows&quot;">RFC4559</a>]）は、
+この要件を破っていることが知られており、セキュリティや相互運用問題を起こす。
 </p>
 
 <p lang="en">
@@ -858,7 +857,7 @@ Authentication in Microsoft Windows&quot;">RFC4559</a>]）は、この要件を�
 <p lang="ja">
    "キャッシュ" とは、以前のレスポンスメッセージのローカルな保管庫とそのメッセージの保存、取り出し、そして削除をコントロールする
 サブシステムである。キャッシュは、将来の等価なリクエストに関してレスポンスにかかる時間とネットワーク帯域の消費を削減する目的で、
-キャッシュ可能なレスポンスを保存する。どんなクライアントやサーバーも、キャッシュを導入<em title="MAY">してもよい</em>。ただし、
+キャッシュ可能なレスポンスを保存する。どんなクライアントやサーバーも、キャッシュを導入してもよい。ただし、
 サーバーがトンネルとして動作している間はそのサーバーがキャッシュを使用することはできない。
 </p>
 
@@ -991,7 +990,15 @@ Conformance and Error Handling</span></h3>
    that the sender does not have for that message).
 </p>
 
-<p>
+<p lang="ja">
+     受信したプロトコル要素をパースするとき、受信者は、自身の役割にあてはまり、対応するABNF規則で定義された文法に一致する、
+妥当な長さのどんな値もパースでき<em title="MUST">なければならない</em>。しかし、受信したプロトコル要素は
+パースされないこともあるかもしれないことに注目せよ。例えば、メッセージを転送する中継者は、ヘッダーフィールドを汎用的な
+フィールド名コンポーネントとフィールド値コンポーネントへとパースし、その時、フィールド値内を更にパースする
+ことなくヘッダーフィールドを転送するかもしれない。
+</p>
+
+<p lang="en">
    When a received protocol element is parsed, the recipient MUST be
    able to parse any value of reasonable length that is applicable to
    the recipient's role and that matches the grammar defined by the
