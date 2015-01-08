@@ -1019,11 +1019,11 @@ Conformance and Error Handling</span></h3>
    elements has changed over the course of the past two decades of HTTP
    use and is expected to continue changing in the future.
 </p>
-
+自身が他のメッセージで同じプロトコル要素のために生成する値と少なくとも同じ長さの
 <p lang="ja">
-  最小でも、受信者は、他のメッセージでは、これら同じプロトコル要素を生成する値と少なくとも同じ長さの
-プロトコル要素の長さをパースならびに処理でき<em title="MUST">なければならない。</em>
-例えば、とても長い自身のリソースへのURI参照を発行するオリジンサーバーは、リクエストターゲットとして受信した場合、
+  最低限、受信者は、プロトコル要素の長さ（この受信者が他のメッセージで同じプロトコル要素に関して生成する値と
+少なくとも同じ長さ）をパースし処理でき<em title="MUST">なければならない</em>。例えば、自らが持っている
+リソースへのとても長いURI参照を発行するオリジンサーバーは、同じURI参照をリクエストターゲットとして受信した場合、
 これら同じ参照をパースならびに処理できる必要がある。
 </p>
 
