@@ -1056,7 +1056,15 @@ Conformance and Error Handling</span></h3>
    fail on receipt of certain content codings.
 </p>
 
-<p>
+<p lang="ja">
+  してはいけないと明示されていなければ、受信者は無効な建設から使用可能なプロトコル要素の復旧を試み<em title="MAY">
+てもよい</em>。エラーハンドリング機構がセキュリティと直接衝突しない場合以外は、HTTPはこれらを具体的に定義しない。
+なぜならプロトコルが要求するエラーハンドリング戦略は、アプリケーションによって違うからである。例えば、
+LocationヘッダーフィールドがABNFに応じてパースしない場合、Webブラウザはレスポンスから透明に復旧することを望むかもしれない。
+ところが、システムコントロールクライアントは、エラー復旧のどんな形態でも危険と判断するかもしれない。
+</p>
+
+<p lang="en">
    Unless noted otherwise, a recipient MAY attempt to recover a usable
    protocol element from an invalid construct.  HTTP does not define
    specific error handling mechanisms except when they have a direct
