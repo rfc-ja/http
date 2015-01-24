@@ -3,9 +3,9 @@
 <head profile="http://dublincore.org/documents/2008/08/04/dc-html/">
 <meta charset="utf-8" />
 <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
-<meta name="DC.Title" content="翻訳 RFC 7230 ハイパーテキスト転送プロトコル (HTTP/1.1): メッセージ構文とルーティング" />
+<meta name="DC.Title" content="翻訳 RFC 7230 ハイパーテキスト転送プロトコル (HTTP/1.1): メッセージシンタックスとルーティング" />
 <link rel="stylesheet" type="text/css" href="./rfc.css" />
-<title>翻訳 RFC 7230 - ハイパーテキスト転送プロトコル (HTTP/1.1): メッセージ構文とルーティング</title>
+<title>翻訳 RFC 7230 - ハイパーテキスト転送プロトコル (HTTP/1.1): メッセージシンタックスとルーティング</title>
 </head>
 <body>
 <div class="translation-note">
@@ -28,13 +28,13 @@ ISSN: 2070-1721
         June 2014
 </pre>
 
-<h1><span lang="en">Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</span><span lang="ja">Hypertext Transfer Protocol (HTTP/1.1): メッセージ構文とルーティング</span></h1>
+<h1><span lang="en">Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</span><span lang="ja">Hypertext Transfer Protocol (HTTP/1.1): メッセージシンタックスとルーティング</span></h1>
 
 <section>
 <h2><span lang="ja">概要</span><span lang="en">Abstract</span></h2>
    <p lang="ja">ハイパーテキスト転送プロトコル (HTTP) は、分散的で協調的なハイパーテキスト情報システムのためのステートレスなアプリケーションレベルのプロトコルである。
    この文書は、HTTP アーキテクチャとそれに関する専門用語の概観を行い、"http" および "https" <abbr title="Uniform Resource Identifier">URI</abbr> スキームを定義し、
-   HTTP/1.1 メッセージ構文と構文解析の要件を定義し、実装におけるセキュリティ関係の問題を記述する。
+   HTTP/1.1 メッセージシンタックスとシンタックス解析の要件を定義し、実装におけるセキュリティ関係の問題を記述する。
    </p>
    <p lang="en">The Hypertext Transfer Protocol (HTTP) is a stateless application-
    level protocol for distributed, collaborative, hypertext information
@@ -215,7 +215,7 @@ ISSN: 2070-1721
 
 <ol>
   <li>
-    <p lang="ja">「メッセージ構文とルーティング」（このドキュメント）</p>
+    <p lang="ja">「メッセージシンタックスとルーティング」（このドキュメント）</p>
     <p lang="en">"Message Syntax and Routing" (this document)</p>
   </li>
   <li>
@@ -285,7 +285,7 @@ ISSN: 2070-1721
      same way as HTTP services.</p>
 
   <p lang="ja">この柔軟性の帰結の一つは、インターフェースの背後で起こることの見地からはこのプロトコルを定義できないことである。
-代わりに、通信の構文、受信した通信の意図、そして期待される受け手のふるまいを定義することだけができる。
+代わりに、通信のシンタックス、受信した通信の意図、そして期待される受け手のふるまいを定義することだけができる。
 もし通信だけを切り離して考えるなら、アクションの成功は、それに応じた、サーバーによってもたらされる観察可能なインターフェースの
 変化に反映されるはずである。しかし、複数のクライアントは並列に、そして食い違う目的で行動することもあるので、
 我々はそういった変化が単一レスポンスの範囲を超えて観察可能であることを要件にできない。
@@ -340,7 +340,7 @@ title="&quot;Key words for use in RFCs to Indicate Requirement Levels&quot;">RFC
 </section>
 
 <section>
-<h3 id="section-1.2">1.2. <span lang="ja">構文の記法</span><span lang="en">Syntax Notation</span></h3>
+<h3 id="section-1.2">1.2. <span lang="ja">シンタックスの記法</span><span lang="en">Syntax Notation</span></h3>
 
    <p lang="ja">この仕様は、[<a href="http://tools.ietf.org/html/rfc5234"
  title="&quot;Augmented BNF for Syntax Specifications: ABNF&quot;">RFC5234</a>]
@@ -385,7 +385,7 @@ OCTET (8ビットデータ)、SP (スペース)、そしてVCHAR (表示され�
 <p lang="ja">
    HTTPは、World Wide Web(WWW)アーキテクチャのために作られ、
 世界規模のハイパーテキストシステムのスケーラビリティのニーズを支えるために、時間とともに発展してきた。
-そのアーキテクチャの多くが、HTTPを定義するために用いられる用語や構文生成規則に反映されている。
+そのアーキテクチャの多くが、HTTPを定義するために用いられる用語やシンタックス生成規則に反映されている。
 </p>
 
 <p lang="en">
@@ -973,11 +973,11 @@ Conformance and Error Handling</span></h3>
 </p>
 
 <p lang="ja">
-   適合性には、プロトコル要素の構文とセマンティクス両方が含まれる。送信者は、その送信者自身が誤りだと知っている
+   適合性には、プロトコル要素のシンタックスとセマンティクス両方が含まれる。送信者は、その送信者自身が誤りだと知っている
 意味を伝達するプロトコル要素を生成<em title="MUST NOT">してはならない</em>。送信者は、対応するABNF規則で定義された
 文法に従わないプロトコル要素を生成<em title="MUST NOT">してはならない</em>。あるメッセージの中で、送信者は、
 他の役割（すなわち、この送信者がそのメッセージに関して持たない役割）の参加者によってのみ生成することを許されたプロトコル要素や
-代替構文を生成<em title="MUST NOT">してはならない</em>。
+代替シンタックスを生成<em title="MUST NOT">してはならない</em>。
 </p>
 
 <p lang="en">
