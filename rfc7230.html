@@ -1127,7 +1127,16 @@ HTTP-versionは大文字小文字を区別する。
      HTTP-name     = %x48.54.54.50 ; "HTTP", case-sensitive
 </pre>
 
-<p>
+<p lang="ja">
+   HTTPバージョン番号は、"." （ピリオド、小数点とも言う）で区切られた2つの10進法数字で構成される。
+最初の数字（"メジャーバージョン"）はHTTPメッセージング構文を示し、2つ目の数字（"マイナーバージョン"）
+は、そのメジャーバージョンの中でも送信者が適合し将来の通信にて理解できる最も高いマイナーバージョンを示す。
+送信者がこのプロトコルの後方互換のあるサブセットだけを使用している場合であっても、マイナーバージョンは
+その送信者の通信能力を伝え、それによって、（サーバーによる）レスポンスや（クライアントによる）
+将来のリクエストにおいてもっと高度な特徴を使用できることを受信者に知らせる。
+</p>
+
+<p lang="en">
    The HTTP version number consists of two decimal digits separated by a
    "." (period or decimal point).  The first digit ("major version")
    indicates the HTTP messaging syntax, whereas the second digit ("minor
