@@ -1160,7 +1160,15 @@ HTTP-versionは大文字小文字を区別する。
    the recipient supports HTTP/1.1.
 </p>
 
-<p>
+<p lang="ja">
+    ヘッダーフィールドがない状況で受信者のディフォルトの動作が変わる可能性があるものの、ヘッダーフィールドの
+解釈は同じHTTPメジャーバージョンとマイナーバージョンの間で変わることはない。特に断りのない限り、
+HTTP/1.1で定義されたヘッダーフィールドは、HTTP/1.x系全てのバージョンで定義される。特に、
+ホストヘッダーフィールドとコネクションヘッダーフィールドは、それらがHTTP/1.1との適合をしめそうがしまいが、
+全てのHTTP/1.x系によって実装されるはずである。
+</p>
+
+<p lang="en">
    The interpretation of a header field does not change between minor
    versions of the same major HTTP version, though the default behavior
    of a recipient in the absence of such a field can change.  Unless
