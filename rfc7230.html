@@ -1170,7 +1170,13 @@ HTTP-versionは大文字小文字を区別する。
    whether or not they advertise conformance with HTTP/1.1.
 </p>
 
-<p>
+<p lang="ja">
+   新しいヘッダーフィールドの定義されたセマンティクスがそれらを認識しない受信者に安全に無視させる場合、
+このヘッダーフィールドはプロトコルバージョンを変えることなく導入できる。ヘッダーフィールド拡張性は
+<a href="#section-3.2.1">セクション 3.2.1</a>で論じられる。
+</p>
+
+<p lang="en">
    New header fields can be introduced without changing the protocol
    version if their defined semantics allow them to be safely ignored by
    recipients that do not recognize them.  Header field extensibility is
