@@ -1149,7 +1149,16 @@ HTTP-versionは大文字小文字を区別する。
    (by servers) or in future requests (by clients).
 </p>
 
-<p>
+<p lang="ja">
+    HTTP/1.1メッセージがHTTP/1.0受信者 [<a href="http://tools.ietf.org/html/rfc1945"
+title="&quot;Hypertext Transfer Protocol -- HTTP/1.0&quot;">RFC1945</a>] やバージョンが不明な
+受信者に送信される場合、HTTP/1.1メッセージは、もし全てのより新しい機能が無視されるなら正当なHTTP/1.0
+メッセージとして解釈されうるように構成される。この仕様はいくつかの新しい特徴において受信者のバージョンに関する要件を設ける。
+それによって、受信者がHTTP/1.1をサポートすると送信者が設定やメッセージの受信を通じて断定するまで、仕様に適合する送信者は
+互換性のある特徴のみを使用する。
+</p>
+
+<p lang="en">
    When an HTTP/1.1 message is sent to an HTTP/1.0 recipient [<a href="http://tools.ietf.org/html/rfc1945" title="&quot;Hypertext Transfer Protocol -- HTTP/1.0&quot;">RFC1945</a>]
    or a recipient whose version is unknown, the HTTP/1.1 message is
    constructed such that it can be interpreted as a valid HTTP/1.0
