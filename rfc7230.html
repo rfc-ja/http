@@ -1186,7 +1186,13 @@ Connectionヘッダーフィールドは、HTTP/1.1との適合を伝えよう�
    whether or not they advertise conformance with HTTP/1.1.
 </p>
 
-<p>
+<p lang="ja">
+   新しいヘッダーフィールドについて、それらを認識しない受信者が安全に無視するようなセマンティクスになっているのなら、
+そのヘッダーフィールドはプロトコルバージョンを変えることなく導入できる。ヘッダーフィールド拡張性については
+<a href="#section-3.2.1">セクション 3.2.1</a>で論じる。
+</p>
+
+<p lang="en">
    New header fields can be introduced without changing the protocol
    version if their defined semantics allow them to be safely ignored by
    recipients that do not recognize them.  Header field extensibility is
