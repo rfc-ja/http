@@ -1193,7 +1193,16 @@ Connectionヘッダーフィールドは、HTTP/1.1との適合を伝えよう�
    discussed in <a href="#section-3.2.1">Section 3.2.1</a>.
 </p>
 
-<p>
+<p lang="ja">
+    HTTPメッセージを処理する中継者（すなわち、トンネルとして動作している以外の全ての中継者）は、
+転送するメッセージにおいて自分自身のHTTP-versionを送信し<em title="MUST">なければならない</em>。
+言い換えると、メッセージに含まれるプロトコルバージョンがメッセージ送受信両方についての中継者の適合バージョンと
+合致することを保証しないなら、この中継者はHTTPメッセージの最初の行を盲目に転送することを許されない。
+下流の受信者がこの送信者のバージョンを使ってどの機能がこの送信者と後の通信にて安全に使用できるかを決めるとき、
+HTTP-versionを書き換えずにHTTPメッセージを転送することは通信エラーとなるかもしれない。
+</p>
+
+<p lang="en">
    Intermediaries that process HTTP messages (i.e., all intermediaries
    other than those acting as tunnels) MUST send their own HTTP-version
    in forwarded messages.  In other words, they are not allowed to
