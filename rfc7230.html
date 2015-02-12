@@ -1228,7 +1228,13 @@ HTTP-versionを書き換えずにHTTPメッセージを転送することは通�
    features are safe to use for later communication with that sender.
 </p>
 
-<p>
+<p lang="ja">
+  クライアントは、自身が適合する最も高いバージョンのリクエストバージョンや、メジャーバージョンが（もしわかっているなら）
+サーバーがサポートする最も高いバージョン以下であるリクエストバージョンを送信する<em title="SHOULD">べきである</em>。
+クライアントは自身が適合しないバージョンを送信<em title="MUST NOT">してはならない</em>。
+</p>
+
+<p lang="en">
    A client SHOULD send a request version equal to the highest version
    to which the client is conformant and whose major version is no
    higher than the highest version supported by the server, if this is
