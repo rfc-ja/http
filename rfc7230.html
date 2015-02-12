@@ -1236,7 +1236,14 @@ HTTP-versionを書き換えずにHTTPメッセージを転送することは通�
    conformant.
 </p>
 
-<p>
+<p lang="ja">
+   クライアントは、サーバーが誤ってHTTP仕様を実装したことが知られている場合、より低いリクエストバージョンを送信する
+<em title="MAY">かもしれない</em>。しかしそれが起こるのは、そのクライアントが少なくとも一つの普通のリクエストを試みて、
+サーバーが不適切により高いバージョンを処理することをレスポンスのステータスコードやヘッダーフィールド（例えば、Server）から
+判断した後になってのみである。
+</p>
+
+<p lang="en">
    A client MAY send a lower request version if it is known that the
    server incorrectly implements the HTTP specification, but only after
    the client has attempted at least one normal request and determined
