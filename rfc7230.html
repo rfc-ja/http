@@ -1251,7 +1251,14 @@ HTTP-versionを書き換えずにHTTPメッセージを転送することは通�
    the server improperly handles higher request versions.
 </p>
 
-<p>
+<p lang="ja">
+   サーバーは、自身が適合する最も高いバージョンであり、かつメジャーバージョンがリクエストで受信したもの以下の
+レスポンスバージョンを送信する<em title="SHOULD">べきである</em>。サーバーは自身が適合しないバージョンを
+送信<em title="MUST NOT">してはならない</em>。サーバーは、いかなる理由であれクライアントのメジャープロトコルバージョンの
+サービスを拒否することを望むなら、505（HTTP Version Not Supported）レスポンスを送信できる。
+</p>
+
+<p lang="en">
    A server SHOULD send a response version equal to the highest version
    to which the server is conformant that has a major version less than
    or equal to the one received in the request.  A server MUST NOT send
