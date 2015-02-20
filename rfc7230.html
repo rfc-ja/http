@@ -1280,7 +1280,17 @@ HTTP-versionを書き換えずにHTTPメッセージを転送することは通�
    the values sent by a client known to be in error.
 </p>
 
-<p>
+<p lang="ja">
+    HTTPのバージョニング設計の意図は、相容れないメッセージシンタックスが導入される場合はメジャー番号が増加するだけであり、
+プロトコルに起こった変化がメッセージセマンティクスに加える影響や送信者の更なる能力を暗示する影響がある場合には、
+マイナー番号が増加するだけである。しかし、マイナーバージョンは[<a href="http://tools.ietf.org/html/rfc2068"
+ title="&quot;Hypertext Transfer Protocol -- HTTP/1.1&quot;">RFC2068</a>]
+と[<a href="http://tools.ietf.org/html/rfc2616" title="&quot;Hypertext Transfer
+ Protocol -- HTTP/1.1&quot;">RFC2616</a>]の間に導入される変化に関しては増加されず、そしてこの改定は
+プロトコルに対する変化を明確に避ける。
+</p>
+
+<p lang="en">
    The intention of HTTP's versioning design is that the major number
    will only be incremented if an incompatible message syntax is
    introduced, and that the minor number will only be incremented when
