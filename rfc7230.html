@@ -1273,7 +1273,16 @@ HTTP-versionを書き換えずにHTTPメッセージを転送することは通�
    to refuse service of the client's major protocol version.
 </p>
 
-<p>
+<p lang="ja">
+    クライアントが誤ってHTTP仕様を実装し、より新しいバージョンでのレスポンスを正しく処理できないと知られていたり疑われる場合
+（クライアントがバージョン番号を正しくパースできない場合や、中継者がプロトコルのマイナーバージョンと適合しないのに
+盲目にHTTP-versionを転送することが知られている場合など）、サーバーはリクエストに対してHTTP/1.0レスポンスを送信
+<em title="MAY">してもよい</em>。誤っているとわかっているクライアントの送信する値と一つ以上のリクエストヘッダーフィールド
+（例えば、User-Agent）が一意に一致する場合などのように、特定のクライアントの属性によって引き起こされるのでないかぎり、
+そのようなプロトコルのダウングレードは実行される<em title="SHOULD NOT">べきではない</em>。
+</p>
+
+<p lang="en">
    A server MAY send an HTTP/1.0 response to a request if it is known or
    suspected that the client incorrectly implements the HTTP
    specification and is incapable of correctly processing later version
