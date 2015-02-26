@@ -1316,7 +1316,15 @@ HTTP-versionを書き換えずにHTTPメッセージを転送することは通�
    specifically avoided any such changes to the protocol.
 </p>
 
-<p>
+<p lang="ja">
+   受信者が実装しているあるメジャーバージョン番号について、その受信者が実装しているものより高いマイナーバージョン番号の
+HTTPメッセージを受信した場合、受信者は、そのメッセージのマイナーバージョンはその同じメジャーバージョンのうち自身が
+適合する最も高いものであるかのように処理<em title="SHOULD">するべき</em>である。より高いマイナーバージョンへの
+サポートをまだ示していない受信者にメッセージが送信された場合、受信者は、より高いそのバージョンのメッセージの
+後方互換性は十分であり同じメジャーバージョンのどんな実装においても安全に処理されると仮定することができる。
+</p>
+
+<p lang="en">
    When an HTTP message is received with a major version number that the
    recipient implements, but a higher minor version number than what the
    recipient implements, the recipient SHOULD process the message as if
