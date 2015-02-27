@@ -1351,7 +1351,17 @@ HTTPメッセージを受信した場合、受信者は、そのメッセージ�
    define relationships.
 </p>
 
-<p>
+<p lang="ja">
+   "URI-reference"、"absolute-URI"、"relative-part"、"scheme"、"authority"、"port"、"host"、
+"path-abempty"、"segment"、"query"、そして "fragment" の定義には汎用的なURI構文が採用される。
+"absolute-path" 規則は、空ではないパスコンポーネントを含むことができるプロトコル要素に関して定義される。
+（この規則は、空のパスを参照に使用することを許可した<a href="http://tools.ietf.org/html/rfc3986">
+RFC 3986</a>のpath-abempty規則とはわずかに違い、path-absoluteはパスが "//" で開始されることを許可しない。）
+"partial-URI" 規則は、相対パスを含めることができるがフラグメントコンポーネントは含めることができない
+プロトコル要素に関して定義される。
+</p>
+
+<p lang="en">
    The definitions of "URI-reference", "absolute-URI", "relative-part",
    "scheme", "authority", "port", "host", "path-abempty", "segment",
    "query", and "fragment" are adopted from the URI generic syntax.  An
