@@ -1358,7 +1358,17 @@ Resource Identifier (URI): Generic Syntax&quot;">RFC3986</a>]は、HTTPの至る
    define relationships.
 </p>
 
-<p>
+<p lang="ja">
+   "URI-reference"、"absolute-URI"、"relative-part"、"scheme"、"authority"、"port"、"host"、
+"path-abempty"、"segment"、"query"、そして "fragment" の定義は汎用的なURI構文から採っている。
+"absolute-path" 規則は、空ではないパスコンポーネントを含むことができるプロトコル要素のために定義される。
+（この規則は、空のパスを参照に使用することを許す<a href="http://tools.ietf.org/html/rfc3986">
+RFC 3986</a>のpath-abempty規則や、パスが "//" で始まることを許さないpath-absolute規則とは、わずかに異なる。）
+"partial-URI" 規則は、相対URIを含めることができるがフラグメントコンポーネントは含むことができない
+プロトコル要素のために定義される。
+</p>
+
+<p lang="en">
    The definitions of "URI-reference", "absolute-URI", "relative-part",
    "scheme", "authority", "port", "host", "path-abempty", "segment",
    "query", and "fragment" are adopted from the URI generic syntax.  An
