@@ -1390,7 +1390,14 @@ Resource Identifier (URI): Generic Syntax&quot;">RFC3986</a>]は、HTTPの至る
      partial-URI   = relative-part [ "?" query ]
 </pre>
 
-<p>
+<p lang="ja">
+   URI参照を許されたHTTPの各プロトコル要素は、その要素がどんな形の参照（URI-reference）でも、
+絶対形式のURI（absolute-URI）のみ、パスや任意のクエリコンポーネントのみ、またはこれらの組み合わせを
+許すかどうかということをABNF生成として示す。特に示されない限り、URI参照は有効なリクエストURI
+（<a href="#section-5.5">セクション 5.5</a>）と比較されパースされる。
+</p>
+
+<p lang="en">
    Each protocol element in HTTP that allows a URI reference will
    indicate in its ABNF production whether the element allows any form
    of reference (URI-reference), only a URI in absolute form
