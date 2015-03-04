@@ -1401,7 +1401,14 @@ RFC 3986</a>のpath-abempty規則や、パスが "//" で始まることを許�
      partial-URI   = relative-part [ "?" query ]
 </pre>
 
-<p>
+<p lang="ja">
+  URI参照を許されたHTTPの各プロトコル要素は、どんな形の参照（URI-reference）でも許すのか、絶対形式のURI
+（absolute-URI）のみ許すのか、パスやオプションのクエリコンポーネントのみ許すのか、またはこれらの組み合わせを
+許すのかということをABNFプロダクションにて示す。特に示されない限り、URI参照は実行リクエストURI
+（<a href="#section-5.5">セクション 5.5</a>）からの相対としてパースされる。
+</p>
+
+<p lang="en">
    Each protocol element in HTTP that allows a URI reference will
    indicate in its ABNF production whether the element allows any form
    of reference (URI-reference), only a URI in absolute form
