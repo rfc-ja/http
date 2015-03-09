@@ -1444,7 +1444,17 @@ HTTPオリジンサーバーによって管理される。
                 [ "#" fragment ]
 </pre>
 
-<p>
+<p lang="ja">
+   "http" URIのためのオリジンサーバーは、ホスト識別子とオプションのTCPポート
+（<a href="http://tools.ietf.org/html/rfc3986#section-3.2.2">[RFC3986]、セクション3.2.2</a>）
+を含んだ権威コンポーネントで識別される。階層的なパスコンポーネントとオプションのクエリコンポーネントは、
+オリジンサーバーの名前空間内で潜在的なターゲット資源のための識別子としての役割を果たす。
+<a href="http://tools.ietf.org/html/rfc3986#section-3.5">[RFC3986]のセクション3.5</a>
+で定義されるように、オプションのフラグメントコンポーネントは、URIスキームとは独立した二次的資源のための
+間接的な識別子を許す。
+</p>
+
+<p lang="en">
    The origin server for an "http" URI is identified by the authority
    component, which includes a host identifier and optional TCP port
    (<a href="http://tools.ietf.org/html/rfc3986#section-3.2.2">[RFC3986], Section&nbsp;3.2.2</a>).  The hierarchical path component and
