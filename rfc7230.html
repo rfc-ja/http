@@ -1455,7 +1455,12 @@ HTTPオリジンサーバーによって管理される。
    [RFC3986]</a>.
 </p>
 
-<p>
+<p lang="ja">
+   送信者は空のホスト識別子で "http" URIを生成<em title="MUST NOT">してはならない</em>。
+そのようなURI参照を処理する受信者はそれを不正とみなし拒否<em title="MUST">しなければならない</em>。
+</p>
+
+<p lang="en">
    A sender MUST NOT generate an "http" URI with an empty host
    identifier.  A recipient that processes such a URI reference MUST
    reject it as invalid.
