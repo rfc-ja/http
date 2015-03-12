@@ -1476,7 +1476,15 @@ URIスキームに依存しない。
    reject it as invalid.
 </p>
 
-<p>
+<p lang="ja">
+  ホスト識別子がIPアドレスとして提供される場合、オリジンサーバーは（もしあるなら）指示されたそのIPアドレスの
+TCPポートにおけるリスナーである。ホストが登録された名前の場合、その名前は、そのオリジンサーバーに
+関するアドレスを見つけるためにDNSのような名前解決サービスで使用される間接的な識別子である。
+サブコンポーネントが空だったり提供されない場合、TCPポート80（WWWサービスのために予約されたポート）
+がデフォルトである。
+</p>
+
+<p lang="en">
    If the host identifier is provided as an IP address, the origin
    server is the listener (if any) on the indicated TCP port at that IP
    address.  If host is a registered name, the registered name is an
