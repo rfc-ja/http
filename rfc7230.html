@@ -1506,7 +1506,17 @@ URIスキームに依存しない。
    security considerations related to establishing authority.
 </p>
 
-<p>
+<p lang="ja">
+  指定されたリソースへのアクセスを要求する文脈内で "http" URIが使われる場合、ホストをIPアドレスへ解決し、
+そのアドレスの指定されたポートへTCPコネクションを確立し、そしてURIの識別するデータ（<a href="#section-5">
+セクション 5</a>）を含むHTTPリクエストメッセージ（<a href="#section-3">セクション 3</a>）を
+サーバーに送信し、クライアントはアクセスを試み<em title="MAY">てもよい</em>。
+<a href="http://tools.ietf.org/html/rfc7231#section-6">[RFC7231]のセクション6</a>で示されるように、
+サーバーがそのリクエストに暫定的ではないHTTPレスポンスメッセージで応答するなら、そのレスポンスはクライアントの
+リクエストに対する権威ある応答とみなされる。
+</p>
+
+<p lang="en">
    When an "http" URI is used within a context that calls for access to
    the indicated resource, a client MAY attempt access by resolving the
    host to an IP address, establishing a TCP connection to that address
