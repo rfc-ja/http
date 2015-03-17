@@ -1524,7 +1524,15 @@ URIスキームに依存しない。
    request.
 </p>
 
-<p>
+<p lang="ja">
+  HTTPは通信プロトコルに依存しないが、名前の移譲処理はオーソリティを確立するためにTCPに依存するため、
+"http" スキームはTCP-basedサービスに特化している。"https" スキーム（以下）がエンドツーエンドの
+セキュアなコネクションを要求するように、他の基礎となるコネクションプロトコルを元にしたHTTPサービスは、
+おそらく違うURIスキームを使っていると識別される。その他のプロトコルは "https" と識別されるリソースへの
+アクセスを提供する。それはTCPに特化した権威あるインターフェースである。
+</p>
+
+<p lang="en">
    Although HTTP is independent of the transport protocol, the "http"
    scheme is specific to TCP-based services because the name delegation
    process depends on TCP for establishing authority.  An HTTP service
