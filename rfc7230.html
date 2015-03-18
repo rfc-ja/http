@@ -1555,7 +1555,19 @@ HTTPサーバーが常にあることを意味しない点に注目せよ。URI�
    interface that is specific to TCP.
 </p>
 
-<p>
+<p lang="ja">
+  オーソリティに関する汎用的なURI構文は、ユーザー認証情報をURIに含むために廃止されたユーザー情報サブコンポーネント
+（<a href="http://tools.ietf.org/html/rfc3986#section-3.2.1">[RFC3986]、セクション3.2.1</a>）
+も含む。いくつかの実装は、コマンド発動オプション、設定ファイル、またはブックマークリストのような認証情報の
+内部設定のためにユーザー情報コンポーネントを活用する。このような活用はユーザーの識別子やパスワードを晒すかも
+しれないにもかかわらずである。"http" URI参照がメッセージ内でリクエストターゲットやヘッダーフィールド値として
+生成された場合、送信者はユーザー情報サブコンポーネント（ならびに "@" 区切り文字）を生成<em title="MUST NOT">
+してはならない</em>。信頼できないソースから受信した "http" URI参照を活用する前に、受信者はユーザー情報を
+パースしつつ、その存在をエラーとして扱う<em title="SHOULD">べきである</em>。
+その参照はフィッシング攻撃を目的とし、オーソリティを曖昧にするために使用されていると考えられる。
+</p>
+
+<p lang="en">
    The URI generic syntax for authority also includes a deprecated
    userinfo subcomponent (<a href="http://tools.ietf.org/html/rfc3986#section-3.2.1">[RFC3986], Section&nbsp;3.2.1</a>) for including user
    authentication information in the URI.  Some implementations make use
