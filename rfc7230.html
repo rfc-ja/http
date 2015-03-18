@@ -1494,7 +1494,16 @@ URIスキームに依存しない。
    for WWW services) is the default.
 </p>
 
-<p>
+<p lang="ja">
+    オーソリティコンポーネントを持ったURIの存在は、そのホストとポートへの接続を待ち受けている
+HTTPサーバーが常にあることを意味しない点に注目せよ。URIを作るのは誰にでもできる。
+オーソリティコンポーネントが決めるのは、その識別されたリソースに対するリクエストへの権威ある応答の権利を誰が持っているか
+ということである。登録された名前とIPアドレスの移譲的な性質は、HTTPサーバーが存在しようがしまいが、
+指定されたホストとポートの制御に基づいた、連合された名前空間を作り出す。
+オーソリティの確立に関連するセキュリティ考察は<a href="#section-9.1">セクション 9.1</a>を見よ。
+</p>
+
+<p lang="en">
    Note that the presence of a URI with a given authority component does
    not imply that there is always an HTTP server listening for
    connections on that host and port.  Anyone can mint a URI.  What the
