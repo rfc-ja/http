@@ -1543,7 +1543,16 @@ HTTPサーバーが常にあることを意味しない点に注目せよ。URI�
    request.
 </p>
 
-<p>
+<p lang="ja">
+  HTTPはトランスポート層のプロトコルに依存しないが、オーソリティを確立するために名前の移譲処理はTCPに依存するため、
+"http" スキームはTCPを基にしたサービスに特化している。"https" スキーム（後述）がエンドツーエンドの
+セキュアなコネクションを要求するリソースのために使用されるように、他の基礎となるコネクションプロトコルを基にした
+HTTPサービスは、おそらく違うURIスキームを使うことで識別される。他のプロトコルも "http" で識別されるリソースへの
+アクセスを提供するために使用されるかもしれない。"http" スキームはTCPに特化した権威あるインターフェースであるにす
+ぎない。
+</p>
+
+<p lang="en">
    Although HTTP is independent of the transport protocol, the "http"
    scheme is specific to TCP-based services because the name delegation
    process depends on TCP for establishing authority.  An HTTP service
