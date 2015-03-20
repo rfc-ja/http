@@ -1591,7 +1591,14 @@ HTTPサービスは、おそらく違うURIスキームを使うことで識別�
    given TCP port for TLS-secured connections ([<a href="http://tools.ietf.org/html/rfc5246" title="&quot;The Transport Layer Security (TLS) Protocol Version 1.2&quot;">RFC5246</a>]).
 </p>
 
-<p>
+<p lang="ja">
+   "http" スキームに関して上記列挙された全ての要件は、"https" に関する要件でもありある。
+例外は、ポートサブコンポーネントが空だったり提供されない場合はTCPポート443がデフォルトであり、
+最初のHTTPリクエストを送信する前にエンドツーエンドで協力な暗号化を通じて、オリジンサーバーへの
+そのコネクションがセキュアであることを保証<em title="MUST">しなければならい</em>ことである。
+</p>
+
+<p lang="en">
    All of the requirements listed above for the "http" scheme are also
    requirements for the "https" scheme, except that TCP port 443 is the
    default if the port subcomponent is empty or not given, and the user
