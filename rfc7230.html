@@ -1597,7 +1597,14 @@ HTTPサービスは、おそらく違うURIスキームを使うことで識別�
 <h4 id="section-2.7.2">2.7.2. <span lang="ja">https URIスキーム</span><span lang="en">
 https URI Scheme</span></h4>
 
-<p>
+<p lang="ja">
+  "https" URIスキームは本書にて、階層的名前空間との関連に従って識別子をつくり出すことを目的として定義される。
+この名前空間は、あるTCPポートにてTLSで安全にされたコネクション（[<a href="http://tools.ietf.org/html/rfc5246"
+title="&quot;The Transport Layer Security (TLS) Protocol Version 1.2&quot;">RFC5246</a>]）
+を待ち受けている潜在的なHTTPオリジンサーバーによって管理される。
+</p>
+
+<p lang="en">
    The "https" URI scheme is hereby defined for the purpose of minting
    identifiers according to their association with the hierarchical
    namespace governed by a potential HTTP origin server listening to a
