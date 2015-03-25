@@ -1633,12 +1633,12 @@ title="&quot;The Transport Layer Security (TLS) Protocol Version 1.2&quot;">RFC5
 </pre>
 
 <p lang="ja">
-  "https" URIスキームはオーソリティ確立するためにTLSとTCPの両方に依存することに注目せよ。リソース識別子が同じ
-オーソリティ（同じTCPポートで待ち受けている同じホスト）を示したとしても、"https" スキームを通じて利用可能に
-なったリソースは、共有された "http" スキームとのアイデンティティを持たない。これらは別個の名前空間であり、
+  "https" URIスキームはオーソリティを確立するためにTLSとTCPの両方に依存することに注目せよ。リソース識別子が同じ
+オーソリティ（同じTCPポートで待ち受けている同じホスト）を示したとしても、"https" スキームを通じて利用可能な
+リソースは、"http" スキームとの共有されたアイデンティティを持たない。これらは別個の名前空間であり、
 別個のオリジンサーバーであると認識される。しかし、Cookieプロトコル[<a href="http://tools.ietf.org/html/rfc6265" 
-title="&quot;HTTP State Management Mechanism&quot;">RFC6265</a>]のようなホストドメイン全体にあてはまる
-HTTPへの拡張は、あるサービスによって課せられた情報でホストドメイン群が一致する他のサービスとの通信に影響を
+title="&quot;HTTP State Management Mechanism&quot;">RFC6265</a>]のような複数のホストドメイン全体に適用される
+HTTPへの拡張は、あるサービスによって設けられた情報でホストドメイン一致するグループの中で他のサービスとの通信に影響を
 与えることを可能にする。
 </p>
 
