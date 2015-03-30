@@ -1674,7 +1674,13 @@ title="&quot;HTTP Over TLS&quot;">RFC2818</a>]で定義される。
 <section>
 <h4 id="section-2.7.3">2.7.3. <span>http and https URI Normalization and Comparison</span></h4>
 
-<p>
+<p lang="ja">
+  "http" および "https" スキームは、汎用的なURI構文に適合するので、それらのURIは
+<a href="http://tools.ietf.org/html/rfc3986#section-6">[RFC3986]のセクション6</a>で定義される
+アルゴリズムに従い、それぞれのスキームに関して上記のデフォルトの値を使って、正規化され比較される。
+</p>
+
+<p lang="en">
    Since the "http" and "https" schemes conform to the URI generic
    syntax, such URIs are normalized and compared according to the
    algorithm defined in <a href="http://tools.ietf.org/html/rfc3986#section-6">Section&nbsp;6 of [RFC3986]</a>, using the defaults
