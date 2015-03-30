@@ -1687,7 +1687,18 @@ title="&quot;HTTP Over TLS&quot;">RFC2818</a>]で定義される。
    described above for each scheme.
 </p>
 
-<p>
+<p lang="ja">
+  ポートがあるスキームに関するデフォルトポートと同じ場合、正規の形式はポートサブコンポーネントを省略する。
+OPTIONSリクエストのリクエストターゲットとして空のパスコンポーネントが絶対形式で使用されていない場合、
+それは "/" の絶対パスと等価である。そのため正規の形式は "/" のパスを替わりに提供する。スキームおよびホストは
+大文字小文字を区別せず、通常は小文字で提供される。他の全てのコンポーネントは大文字小文字を区別し比較される。
+"reserved" されていない文字は、それらのパーセントエンコードされた8ビットである。正規の形式はそれらを
+エンコードしない（[<a href="http://tools.ietf.org/html/rfc3986" title="&quot;Uniform 
+Resource Identifier (URI): Generic Syntax&quot;">RFC3986</a>]のセクション<a href="#section-2.1">
+2.1</a>およびセクション<a href="#section-2.2">2.2</a>を見よ）。
+</p>
+
+<p lang="en">
    If the port is equal to the default port for a scheme, the normal
    form is to omit the port subcomponent.  When not being used in
    absolute form as the request target of an OPTIONS request, an empty
