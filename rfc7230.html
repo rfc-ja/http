@@ -1757,7 +1757,14 @@ RFC5322</a>]に似たフォーマットのオクテットの列で構成され�
 
 
 
-<p>
+<p lang="ja">
+  HTTPメッセージをパースするための通常の手続きは、start-line の構造を読みとり、各ヘッダーフィールドを空行が現れるまで
+フィールドネームによるハッシュテーブルへと読み込み、それからパースされたデータを使ってメッセージボディがあると期待されるか
+どうかを決定する。メッセージボディがあると示された場合、オクテットの量がメッセージボディの長さと等しくなるまで、
+もしくはコネクションが閉じられるまで、ストリームとして読み込まれる。
+</p>
+
+<p lang="en">
    The normal procedure for parsing an HTTP message is to read the
    start-line into a structure, read each header field into a hash table
    by field name until the empty line, and then use the parsed data to
