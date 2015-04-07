@@ -1730,7 +1730,15 @@ Resource Identifier (URI): Generic Syntax&quot;">RFC3986</a>]のセクション<
 <section>
 <span class="h2"><a class="selflink" name="section-3" href="#section-3">3</a>.  Message Format</span>
 
-<p>
+<p lang="ja">
+  全ての HTTP/1.1 メッセージは、start-line と、その後に続くインターネットメッセージフォーマット
+[<a href="http://tools.ietf.org/html/rfc5322" title="&quot;Internet Message Format&quot;">
+RFC5322</a>]に似たフォーマットのオクテットの列で構成されている。この列は、ゼロ個以上のヘッダーフィールド
+（まとめて "ヘッダー" や "ヘッダーセクション" と称される）で始まり、ヘッダーセクションの終わりを示す空行、
+そしてオプションのメッセージボディーが続く。
+</p>
+
+<p lang="en">
    All HTTP/1.1 messages consist of a start-line followed by a sequence
    of octets in a format similar to the Internet Message Format
    [<a href="http://tools.ietf.org/html/rfc5322" title="&quot;Internet Message Format&quot;">RFC5322</a>]: zero or more header fields (collectively referred to as
