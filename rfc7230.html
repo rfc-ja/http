@@ -1767,13 +1767,13 @@ RFC5322</a>]に似たフォーマットのオクテットの列で構成され�
 </p>
 
 <p lang="ja">
-    受信者は、エンコードがUS-ASCII [<a href="#ref-USASCII" title="&quot;Coded Character 
-Set -- 7-bit American Standard Code for Information Interchange&quot;">USASCII</a>]の上位集合である
-オクテットの列としてHTTPメッセージをパース<em title="MUST">しなければならない</em>。特定のエンコードへの注視なく
-HTTPメッセージをUnicode文字のストリームとしてパースすることは、安全性の弱みを作り出してしまう。その弱みとは、
-string処理ライブラリが LF (%x0A) オクテットを含む不正なマルチバイト文字列を扱うような、変化し続ける手段によるものである。
-要素がメッセージから抜き取られた後は、Stringを基にしたパーサーは（メッセージパースが各々のフィールドを描写した後の
-ヘッダーフィールド値内など）プロトコル要素内でのみ安全に使用できる。
+    受信者は、オクテットの列のエンコーディングがUS-ASCII [<a href="#ref-USASCII" title="&quot;Coded Character 
+Set -- 7-bit American Standard Code for Information Interchange&quot;">USASCII</a>]の上位セットである
+としてHTTPメッセージをパース<em title="MUST">しなければならない</em>。用いられているのエンコーディングへの考慮せずに
+HTTPメッセージをUnicode文字のストリームとしてパースすることは、セキュリティ虚弱性を作り出してしまう。その虚弱性とは、
+文字列処理ライブラリが LF (%x0A) オクテットを含む不正なマルチバイト文字列を扱う仕方を変えることによる。
+文字列ベースのパーサーは、メッセージパースが個々のフィールドを千引きした後のヘッダーフィールド値内など、
+要素がメッセージから抜き取られた後でのプロトコル要素内でのみ安全に使用できる。
 </p>
 
 <p lang="en">
