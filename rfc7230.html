@@ -1786,7 +1786,14 @@ RFC5322</a>]に似たフォーマットのオクテットの列で構成され�
    individual fields.
 </p>
 
-<p>
+<p lang="ja">
+   HTTPメッセージは、インクリメンタルに処理するためや下流を転送するためにストリームとしてパースすることができる。
+しかし、いくつかの実装は、ネットワークの効率化、安全性の確認、またはペイロードの変形を目的として、
+バッファーしたりメッセージ転送を遅らせたりするため、受信者は部分的なメッセージをインクリメンタルな送信に
+依存できない
+</p>
+
+<p lang="en">
    An HTTP message can be parsed as a stream for incremental processing
    or forwarding downstream.  However, recipients cannot rely on
    incremental delivery of partial messages, since some implementations
