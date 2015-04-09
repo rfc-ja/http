@@ -1773,7 +1773,18 @@ RFC5322</a>]に似たフォーマットのオクテットの列で構成され�
    equal to the message body length is read or the connection is closed.
 </p>
 
-<p>
+<p lang="ja">
+    受信者は、US-ASCII [<a href="#ref-USASCII" title="&quot;Coded Character Set -- 7-bit 
+American Standard Code for Information Interchange&quot;">USASCII</a>]のスーパーセットな
+エンコーディングを用いたオクテットの列としてHTTPメッセージをパース<em title="MUST">しなければならない</em>。
+用いられているエンコーディングを考慮せずにHTTPメッセージをUnicode文字のストリームとしてパースすることは、
+セキュリティ脆弱性を作り出してしまい、それは、文字列処理ライブラリが LF (%x0A) オクテットを含む不正な
+マルチバイト文字列を扱う仕方を変えることによる。文字列ベースのパーサーは、メッセージの構文解析が個々の
+フィールドを線引きした後のヘッダーフィールド値内など、プロトコル要素がメッセージから抜き取られた後で
+その要素内でのみ安全に使用できる。
+</p>
+
+<p lang="en">
    A recipient MUST parse an HTTP message as a sequence of octets in an
    encoding that is a superset of US-ASCII [<a href="#ref-USASCII" title="&quot;Coded Character Set -- 7-bit American Standard Code for Information Interchange&quot;">USASCII</a>].  Parsing an HTTP
    message as a stream of Unicode characters, without regard for the
