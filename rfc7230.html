@@ -1796,7 +1796,13 @@ American Standard Code for Information Interchange&quot;">USASCII</a>]のスー�
    individual fields.
 </p>
 
-<p>
+<p lang="ja">
+   HTTPメッセージは、少しずつ順に処理するためや下流へ転送するために、ストリームとしてパースすることができる。
+しかし、いくつかの実装は、ネットワークの効率化、安全性の確認、またはペイロードの変形を目的として、
+メッセージ転送をバッファーしたり遅らせたりするため、受信者は部分的なメッセージの漸次的な送信を当てにすることはできない。
+</p>
+
+<p lang="en">
    An HTTP message can be parsed as a stream for incremental processing
    or forwarding downstream.  However, recipients cannot rely on
    incremental delivery of partial messages, since some implementations
