@@ -1820,7 +1820,14 @@ American Standard Code for Information Interchange&quot;">USASCII</a>]のスー�
    header field is received or the header section is terminated).
 </p>
 
-<p>
+<p lang="ja">
+    リクエストにそのようなホワイトスペースがあることは、フィールドを無視させようと、またはその後の行を新たなリクエストで
+あるかのように処理させようと、サーバーを騙そうとするかもしれない。どちらも結果として、リクエストの連鎖の中でその他の実装が
+同じメッセージを違うものと解釈する場合、セキュリティ脆弱性を引き起こす。同様に、レスポンスにそのようなホワイトスペースがある
+ことは、クライアントに無視されたり、その他にパースを辞めさせる原因となるかもしれない。
+</p>
+
+<p lang="en">
    The presence of such whitespace in a request might be an attempt to
    trick a server into ignoring that field or processing the line after
    it as a new request, either of which might result in a security
