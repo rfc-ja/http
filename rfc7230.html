@@ -1810,7 +1810,15 @@ American Standard Code for Information Interchange&quot;">USASCII</a>]のスー�
    efficiency, security checks, or payload transformations.
 </p>
 
-<p>
+<p lang="ja">
+    送信者はstart-lineと最初のヘッダーフィールドの間にホワイトスペースを送信<em title="MUST NOT">
+してはならない</em>。start-lineと最初のヘッダーフィールドの間のホワイトスペースを受け取った受信者は、
+メッセージを不正として拒否するか、あるいは、更なる処理をせずにホワイトスペースで始まる各行を消費
+<em title="MUST">しなければならない</em>（すなわち、適切な形のヘッダーフィールドが受信されるまで、
+またはヘッダーセクションが終わるまで、同じくホワイトスペースで始まる後続の各行とともに行全体を無視する）。
+</p>
+
+<p lang="en">
    A sender MUST NOT send whitespace between the start-line and the
    first header field.  A recipient that receives whitespace between the
    start-line and the first header field MUST either reject the message
