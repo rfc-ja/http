@@ -1860,7 +1860,13 @@ American Standard Code for Information Interchange&quot;">USASCII</a>]のスー�
 
 
 
-<p>
+<p lang="ja">
+   理論的には、start-line形式の違いを区別することで、クライアントはリクエストを受信でき、
+サーバーはレスポンスを受信できる。しかし実際には、サーバーはリクエスト（レスポンスは不明や不正なリクエスト
+メソッドと解釈される）を待ち受けるためだけに実装され、そしてクライアントはレスポンスを待ち受けるためだけに実装される。
+</p>
+
+<p lang="en">
    In theory, a client could receive requests and a server could receive
    responses, distinguishing them by their different start-line formats,
    but, in practice, servers are implemented to only expect a request (a
