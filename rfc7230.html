@@ -1937,7 +1937,15 @@ American Standard Code for Information Interchange&quot;">USASCII</a>]のスー�
    the request, as defined in <a href="#section-5.3">Section 5.3</a>.
 </p>
 
-<p>
+<p lang="ja">
+  受信者は典型的に、ホワイトスペースで分割することで、リクエスト行（request-line）を部分的なコンポーネントへとパースする
+（<a href="#section-3.5">セクション 3.5</a>を見よ）。なぜならホワイトスペースはこれら3つのコンポーネントの中では
+許されていないからである。残念ながらいくつかのユーザーエージェントは、ハイパーテキスト参照にて見つかったホワイトスペースを
+適切にエンコードすることや除外することに失敗する。結果として、それらの許されない文字はリクエストターゲット
+（request-target）の一部として送信される。
+</p>
+
+<p lang="en">
    Recipients typically parse the request-line into its component parts
    by splitting on whitespace (see <a href="#section-3.5">Section 3.5</a>), since no whitespace is
    allowed in the three components.  Unfortunately, some user agents
