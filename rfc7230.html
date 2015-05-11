@@ -1947,11 +1947,11 @@ American Standard Code for Information Interchange&quot;">USASCII</a>]のスー�
 </p>
 
 <p lang="ja">
-   不正なリクエスト行（request-line）の受信者は、適切にエンコードされたリクエストターゲット（request-target）と一緒に、
-400（Bad Request）エラーや301（Moved Permanently）リダイレクトで応答<em title="SHOULD">するべき</em>である。
-受信者は、リダイレクトなしで自動補正しその後リクエストを処理することを試みる<em title="SHOULD NOT">べきではない</em>。
-なぜなら不正なリクエスト行（request-line）は、リクエストの連鎖とともにセキュリティフィルターをバイパスするように
-慎重に作られているかもしれないからである。
+  不正なリクエスト行（request-line）の受信者は、400（Bad Request）エラーや301（Moved Permanently）リダイレクトで
+適切にエンコードされたリクエストターゲット（request-target）と一緒に応答<em title="SHOULD">するべき</em>である。
+受信者は、リダイレクトなしで自動修正しその後リクエストを処理することを試みる<em title="SHOULD NOT">べきではない</em>。
+なぜなら不正なリクエスト行（request-line）は、リクエストの連鎖に沿ったセキュリティフィルターを迂回するように
+故意に作られているかもしれないからである。
 </p>
 
 <p lang="en">
