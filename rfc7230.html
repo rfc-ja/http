@@ -1956,12 +1956,12 @@ American Standard Code for Information Interchange&quot;">USASCII</a>]のスー�
 </p>
 
 <p lang="ja">
-   HTTPは、<a href="#section-2.5">セクション 2.5</a>で記述されるように、
-リクエスト行（request-line）の長さに前もって定義された限界を設けない。自身が実装するどれよりも長いメソッドを
-受信するサーバーは、501（Not Implemented）ステータスコードで応答<em title="SHOULD">するべき</em>である。
-自身がパースしたいどんなURIよりも長いリクエストターゲット（request-target）を受信するサーバーは、
+   <a href="#section-2.5">セクション 2.5</a>で記述されるように、HTTPは
+リクエスト行（request-line）の長さに前もって定義された限界を設けない。自身が実装するいずれのメソッドよりも長いメソッドを
+受信したサーバーは、501（Not Implemented）ステータスコードで応答<em title="SHOULD">するべき</em>である。
+自身がパースしたいいずれのURIよりも長いリクエストターゲット（request-target）を受信したサーバーは、
 414（URI Too Long）ステータスコード（<a href="http://tools.ietf.org/html/rfc7231#section-6.5.12">
-[RFC7231]のセクション6.5.12</a>を見よ）で応答<em title="SHOULD">するべき</em>である。
+[RFC7231]のセクション6.5.12</a>を見よ）で応答<em title="MUST">しなければならない</em>。
 </p>
 
 <p lang="en">
