@@ -2025,7 +2025,15 @@ Status Line</span></h4>
      status-line = HTTP-version SP status-code SP reason-phrase CRLF
 </pre>
 
-<p>
+<p lang="ja">
+  ステータスコード（status-code）要素は3つの数字からなる整数のコードで、クライアントのリクエストを
+サーバーが理解し満たそうとする試みの結果を記述する。レスポンスメッセージの残りは、このステータスコードについて定義された
+意味の観点から解釈される。ステータスコードの種類（最初の数字で示される）、この仕様で定義するステータスコード、
+新たなステータスコードの定義に関する考察、そしてIANAレジストリを含むステータスコードの意味の情報については、
+<a href="http://tools.ietf.org/html/rfc7231#section-6">[RFC7231]のセクション6</a>を見よ。
+</p>
+
+<p lang="en">
    The status-code element is a 3-digit integer code describing the
    result of the server's attempt to understand and satisfy the client's
    corresponding request.  The rest of the response message is to be
