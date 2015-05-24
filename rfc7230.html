@@ -2041,7 +2041,13 @@ Status Line</span></h4>
      status-code    = 3DIGIT
 </pre>
 
-<p>
+<p lang="ja">
+  理由句（reason-phrase）要素は、数字のステータスコードに関連してテキスト記述を提供するという唯一の目的のために
+存在する。それは、相互的なテキストクライアントでもっと頻繁に使用されていた以前のインターネットアプリケーションプロトコルに
+従うことをほとんどしない。クライアントは理由句を無視<em title="SHOULD">するべき</em>である。
+</p>
+
+<p lang="en">
    The reason-phrase element exists for the sole purpose of providing a
    textual description associated with the numeric status code, mostly
    out of deference to earlier Internet application protocols that were
