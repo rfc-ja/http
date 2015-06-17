@@ -2160,7 +2160,15 @@ Field Extensibility</span></h4>
    evaluation, or refine the meaning of responses.
 </p>
 
-<p>
+<p lang="ja">
+   フィールド名（field-name）がConnectionヘッダーフィールド（<a href="#section-6.1">
+セクション 6.1</a>）に列挙されているか、そのプロキシがそのようなフィールドをブロックしたり、あるいは変形したり、
+明確に設定されているのではない限り、プロキシは認識されないヘッダーフィールドを転送<em title="MUST">しなければならない</em>。
+その他の受信者は認識されないヘッダーフィールドを無視<em title="SHOULD">するべき</em>である。これらの要件は、
+配備された中継者の前もったアップデートを要求することなしにHTTPの機能を向上させることを可能にする。
+</p>
+
+<p lang="en">
    A proxy MUST forward unrecognized header fields unless the field-name
    is listed in the Connection header field (<a href="#section-6.1">Section 6.1</a>) or the proxy
    is specifically configured to block, or otherwise transform, such
