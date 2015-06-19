@@ -2193,7 +2193,15 @@ Field Extensibility</span></h4>
 <h4 id="section-3.2.2">3.2.2. <span lang="ja">フィールドの順序</span><span lang="en">
 Field Order</span></h4>
 
-<p>
+<p lang="ja">
+   異なったフィールド名のヘッダーフィールドを受信する順序は重要ではない。しかし、実装がメッセージを扱わないと
+できるだけ早く判断できるように、リクエストにおけるHostやレスポンスにおけるDateのようなコントロールデータを含んだ
+ヘッダーフィールドを最初に送信するのは良い習慣である。サーバーは、リクエストヘッダーセクションの全体を受信するまで、
+リクエストをターゲットリソースに適用<em title="MUST NOT">してはならない</em>。なぜならその後のヘッダーフィールド
+がリクエスト処理に影響を及ぼす適用条件、認証情報、故意に誤解を促す重複したヘッダフィールド等を含むかもしれないからである。
+</p>
+
+<p lang="en">
    The order in which header fields with differing field names are
    received is not significant.  However, it is good practice to send
    header fields that contain control data first, such as Host on
