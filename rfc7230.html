@@ -2210,7 +2210,13 @@ Field Order</span></h4>
    duplicate header fields that would impact request processing.
 </p>
 
-<p>
+<p lang="ja">
+   ヘッダーフィールドのフィールド値全体がカンマ区切り（comma-separated）のリスト[すなわち、,#(values)]として
+定義されるか、ヘッダーフィールドがよく知られた例外（以下に示される）でない限り、送信者は複数のヘッダーフィールドを同じ
+メッセージ内で同じフィールド名を使って生成<em title="MUST NOT">してはならない</em>。
+</p>
+
+<p lang="en">
    A sender MUST NOT generate multiple header fields with the same field
    name in a message unless either the entire field value for that
    header field is defined as a comma-separated list [i.e., #(values)]
