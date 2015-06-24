@@ -2226,7 +2226,15 @@ Field Order</span></h4>
    or the header field is a well-known exception (as noted below).
 </p>
 
-<p>
+<p lang="ja">
+   メッセージの意味論を変えることなく、続くフィールド値の各々をカンマで区切られ順番に連結されたフィールド値に追加する
+ことで、受信者は複数のヘッダーフィールドを同じフィールド名と共に、一つの "field-name: field-value" ペアへと連結
+<em title="MAY">してもよい</em>。よって、同じフィールド名のヘッダーフィールドを受信する順番は連結された
+フィールド値の解釈のために重要である。メッセージを転送する場合、プロキシはそれらフィールド値の順番を変え
+<em title="MUST NOT">てはならない</em>。
+</p>
+
+<p lang="en">
    A recipient MAY combine multiple header fields with the same field
    name into one "field-name: field-value" pair, without changing the
    semantics of the message, by appending each subsequent field value to
