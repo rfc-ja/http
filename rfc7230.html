@@ -1868,7 +1868,7 @@ American Standard Code for Information Interchange&quot;">USASCII</a>]のスー�
 
 
 <p lang="ja">
-   理論的には、start-line形式の違いで区別することで、クライアントがリクエストを受信し、
+   理論的には、<code class="abnf">start-line</code>形式の違いで区別することで、クライアントがリクエストを受信し、
 サーバーがレスポンスを受信することもできる。しかし実際には、サーバーはリクエストだけを期待して実装され
 （レスポンスは不明なまたは不正なリクエストメソッドと解釈される）、クライアントはレスポンスだけを期待して実装される。
 </p>
@@ -1889,8 +1889,8 @@ American Standard Code for Information Interchange&quot;">USASCII</a>]のスー�
 <h4 id="#section-3.1.1">3.1.1.  <span lang="ja">リクエスト行</span><span lang="en">Request Line</span></h4>
 
 <p lang="ja">
-  リクエスト行（request-line）はmethodトークンで始まり、一つのスペース（SP）、リクエストターゲット
-（request-target）、更に一つのスペース（SP）、プロトコルバージョンと続き、そしてCRLFで終了する。
+  リクエスト行（<code class="abnf">request-line</code>）はmethodトークンで始まり、一つのスペース（SP）、リクエストターゲット
+（<code class="abnf">request-target</code>）、更に一つのスペース（SP）、プロトコルバージョンと続き、そしてCRLFで終了する。
 </p>
 
 <p lang="en">
@@ -1928,8 +1928,8 @@ American Standard Code for Information Interchange&quot;">USASCII</a>]のスー�
 </p>
 
 <p lang="ja">
-   リクエストターゲット（request-target）は、<a href="#section-5.3">セクション 5.3</a>で定義されるように、
-リクエストを適用するターゲットリソースを識別する。
+   リクエストターゲット（<code class="abnf">request-target</code>）は、<a href="#section-5.3">
+セクション 5.3</a>で定義されるように、リクエストを適用するターゲットリソースを識別する。
 </p>
 
 <p lang="en">
@@ -1938,11 +1938,11 @@ American Standard Code for Information Interchange&quot;">USASCII</a>]のスー�
 </p>
 
 <p lang="ja">
-  受信者は典型的に、ホワイトスペースで分割することで、リクエスト行（request-line）を部分的なコンポーネントへとパースする
-（<a href="#section-3.5">セクション 3.5</a>を見よ）。なぜならホワイトスペースはこれら3つのコンポーネントの中では
-許されていないからである。残念ながらいくつかのユーザーエージェントは、ハイパーテキスト参照にて見つかったホワイトスペースを
-適切にエンコードすることや除外することに失敗する。結果として、それらの許されない文字はリクエストターゲット
-（request-target）の一部として送信されてしまう。
+   受信者は典型的に、ホワイトスペースで分割することで、リクエスト行（<code class="abnf">request-line</code>）
+を部分的なコンポーネントへとパースする（<a href="#section-3.5">セクション 3.5</a>を見よ）。
+なぜならホワイトスペースはこれら3つのコンポーネントの中では許されていないからである。残念ながらいくつかのユーザーエージェントは、
+ハイパーテキスト参照にて見つかったホワイトスペースを適切にエンコードすることや除外することに失敗する。結果として、
+それらの許されない文字はリクエストターゲット（<code class="abnf">request-target</code>）の一部として送信されてしまう。
 </p>
 
 <p lang="en">
@@ -1955,10 +1955,11 @@ American Standard Code for Information Interchange&quot;">USASCII</a>]のスー�
 </p>
 
 <p lang="ja">
-  不正なリクエスト行（request-line）の受信者は、400（Bad Request）エラーや、適切にエンコードされたリクエストターゲット
-（request-target）への301（Moved Permanently）リダイレクトで応答<em title="SHOULD">するべき</em>である。
-受信者は、リダイレクトなしでリクエストを自動修正し処理することを試みる<em title="SHOULD NOT">
-べきではない</em>。なぜなら不正なリクエスト行（request-line）は、リクエストの連鎖に沿ったセキュリティフィルターを
+    不正なリクエスト行（<code class="abnf">request-line</code>）の受信者は、400（Bad Request）エラーや、
+適切にエンコードされたリクエストターゲット（<code class="abnf">request-target</code>）への301
+（Moved Permanently）リダイレクトで応答<em title="SHOULD">するべき</em>である。受信者は、リダイレクトなしで
+リクエストを自動修正し処理することを試みる<em title="SHOULD NOT">べきではない</em>。なぜなら不正なリクエスト行
+（<code class="abnf">request-line</code>）は、リクエストの連鎖に沿ったセキュリティフィルターを
 迂回するために故意に作られているかもしれないからである。
 </p>
 
@@ -1972,11 +1973,12 @@ American Standard Code for Information Interchange&quot;">USASCII</a>]のスー�
 </p>
 
 <p lang="ja">
-  <a href="#section-2.5">セクション 2.5</a>で記述されるように、HTTPはリクエスト行（request-line）
-の長さに前もって定義された限界を設けない。自身が実装するいずれのメソッドよりも長いメソッド（method）
-を受信したサーバーは、501（Not Implemented）ステータスコードで応答<em title="SHOULD">するべき</em>である。
-自身がパースしたいどのURIよりも長いリクエストターゲット（request-target）を受信したサーバーは、
-414（URI Too Long）ステータスコード（<a href="http://tools.ietf.org/html/rfc7231#section-6.5.12">
+   <a href="#section-2.5">セクション 2.5</a>で記述されるように、HTTPはリクエスト行（<code class="abnf">
+request-line</code>）の長さに前もって定義された限界を設けない。自身が実装するいずれのメソッドよりも長いメソッド
+（<code class="abnf">method</code>）を受信したサーバーは、501（Not Implemented）ステータスコードで応答
+<em title="SHOULD">するべき</em>である。自身がパースしたいどのURIよりも長いリクエストターゲット（<code class="abnf">
+request-target</code>）を受信したサーバーは、414（URI Too Long）ステータスコード
+（<a href="http://tools.ietf.org/html/rfc7231#section-6.5.12">
 [RFC7231]のセクション6.5.12</a>を見よ）で応答<em title="MUST">しなければならない</em>。
 </p>
 
@@ -1998,9 +2000,9 @@ American Standard Code for Information Interchange&quot;">USASCII</a>]のスー�
 </p>
 
 <p lang="ja">
-   リクエスト行（request-line）の長さについてのその場その場の制限は現実場面では様々である。
-全てのHTTP送信者と受信者は、最低でも、8000オクテットの長さのリクエスト行（request-line）をサポートすることが
-<em title="RECOMMENDED">推奨される</em>。
+   リクエスト行（<code class="abnf">request-line</code>）の長さについてのその場その場の制限は現実場面では様々である。
+全てのHTTP送信者と受信者は、最低でも、8000オクテットの長さのリクエスト行（<code class="abnf">request-line</code>）を
+サポートすることが<em title="RECOMMENDED">推奨される</em>。
 </p>
 
 <p lang="en">
@@ -2015,7 +2017,7 @@ American Standard Code for Information Interchange&quot;">USASCII</a>]のスー�
 Status Line</span></h4>
 
 <p lang="ja">
-  レスポンスメッセージの最初の行はステータス行（status-line）である。それは、プロトコルバージョン、
+   レスポンスメッセージの最初の行はステータス行（<code class="abnf">status-line</code>）である。それは、プロトコルバージョン、
 一つのスペース（SP）、ステータスコード、もう一つのスペース、ステータスコードについて説明する（空の可能性のある）
 テキストフレーズ、そして最後にCRLFで構成される。
 </p>
@@ -2032,7 +2034,7 @@ Status Line</span></h4>
 </pre>
 
 <p lang="ja">
-  ステータスコード（status-code）要素は3桁の数字からなる整数のコードで、クライアントのリクエストを
+   ステータスコード（<code class="abnf">status-code</code>）要素は3桁の数字からなる整数のコードで、クライアントのリクエストを
 サーバーが理解し満たそうとする試みの結果を記述する。レスポンスメッセージの残りは、このステータスコードについて定義された
 意味の観点から解釈されるであろう。ステータスコードの種類（最初の数字で示される）、この仕様で定義するステータスコード、
 新たなステータスコードの定義に関する考察、そしてIANAレジストリを含む、ステータスコードの意味論の情報については、
@@ -2056,9 +2058,9 @@ Status Line</span></h4>
 </pre>
 
 <p lang="ja">
-  理由フレーズ（reason-phrase）要素は、数字のステータスコードに関連してテキスト記述を提供するという唯一の目的のために
-存在する。それは主に、インタラクティブなテキストクライアントがもっと頻繁に使用されていた早期のインターネット
-アプリケーションプロトコルにならっている。クライアントは理由フレーズの内容を無視<em title="SHOULD">
+  理由フレーズ（<code class="abnf">reason-phrase</code>）要素は、数字のステータスコードに関連してテキスト記述を
+提供するという唯一の目的のために存在する。それは主に、インタラクティブなテキストクライアントがもっと頻繁に使用されていた
+早期のインターネットアプリケーションプロトコルにならっている。クライアントは理由フレーズの内容を無視<em title="SHOULD">
 するべき</em>である。
 </p>
 
@@ -2113,7 +2115,7 @@ Header Fields</span></h3>
 </pre>
 
 <p lang="ja">
-  フィールド名（field-name）トークンは、対応するフィールド値（field-value）をそのヘッダーフィールドで
+  フィールド名（<code class="abnf">field-name</code）トークンは、対応するフィールド値（field-value）をそのヘッダーフィールドで
 定義された意味論を持つものとしてラベルづけする。例えば、Dateヘッダーフィールドは、
 それが現れるメッセージに関する発信タイムスタンプであると
 <a href="http://tools.ietf.org/html/rfc7231#section-7.1.1.2">[RFC7231]のセクション7.1.1.2</a>
@@ -2161,7 +2163,7 @@ Field Extensibility</span></h4>
 </p>
 
 <p lang="ja">
-   フィールド名（field-name）がConnectionヘッダーフィールド（<a href="#section-6.1">
+   フィールド名（<code class="abnf">field-name</code>）がConnectionヘッダーフィールド（<a href="#section-6.1">
 セクション 6.1</a>）に列挙されているか、そのプロキシがフィールドをブロックしたり、あるいは変形するよう、
 明確に設定されているのではない限り、プロキシは認識されないヘッダーフィールドを転送<em title="MUST">しなければならない</em>。
 その他の受信者は認識されないヘッダーフィールドを無視<em title="SHOULD">するべき</em>である。これらの要件は、
