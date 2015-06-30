@@ -2251,7 +2251,16 @@ Field Order</span></h4>
    forwarding a message.
 </p>
 
-<p>
+<p lang="ja">
+    注意: 実際に、"Set-Cookie" ヘッダーフィールド（[<a href="http://tools.ietf.org/html/rfc6265"
+title="&quot;HTTP State Management Mechanism&quot;">RFC6265</a>]）はしばしば、レスポンスメッセージで複数回現れ、
+リスト構文を使わず、同じ名前を持つ複数のヘッダーフィールドにおける上記要件に違反している。それは一つのフィールド値（field-value）
+へと連結できないため、受信者は "Set-Cookie" をヘッダーフィールドを処理するときの特殊なケースとして扱うべきである。
+（詳細は[<a href="#ref-Kri2001" title="&quot;HTTP Cookies: Standards, Privacy, and Politics&quot;">
+Kri2001</a>]の<a href="#appendix-A.2.3">付録 A.2.3</a>を見よ。）
+</p>
+
+<p lang="en">
       Note: In practice, the "Set-Cookie" header field ([<a href="http://tools.ietf.org/html/rfc6265" title="&quot;HTTP State Management Mechanism&quot;">RFC6265</a>]) often
       appears multiple times in a response message and does not use the
       list syntax, violating the above requirements on multiple header
