@@ -739,7 +739,15 @@ HTTPインターフェースを通じた変換によってこのリクエスト�
    <a href="#section-5.7.2">Section 5.7.2</a>.
 </p>
 
-<p>
+<p lang="ja">
+   "ゲートウェイ" （"リバースプロキシ"としても知られる）は、アウトバウンドコネクションに関して
+オリジンサーバーとして動作する中継者である。しかし、ゲートウェイは受け取ったリクエストを変換し、
+他のサーバー（もしくは、サーバー群）へ、インバウンドに転送する。しばしばゲートウェイは、レガシーな情報サービスや
+信頼性のない情報サービスを隠蔽するため、"アクセラレータ"キャッシングを通じてサーバーのパフォーマンスを改善するため、
+そして複数のマシンにまたがったHTTPサービスのパーティショニングもしくはロードバランシングを可能にするために使用される。
+</p>
+
+<p lang="en">
    A "gateway" (a.k.a. "reverse proxy") is an intermediary that acts as
    an origin server for the outbound connection but translates received
    requests and forwards them inbound to another server or servers.
