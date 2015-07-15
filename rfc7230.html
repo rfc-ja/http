@@ -2315,7 +2315,13 @@ Kri2001</a>]の<a href="#appendix-A.2.3">付録 A.2.3</a>を見よ。）
    unwanted protocol elements during in-place message filtering.
 </p>
 
-<p>
+<p lang="ja">
+   <code class="abnf">RWS</code>ルールが使用されるのは、フィールドトークンを区切るために少なくとも一つの連続する
+ホワイトスペースオクテットが要求されるときである。送信者は<code class="abnf">RWS</code>を一つの<code class="abnf">
+SP</code>として生成する<em title="SHOULD">べきである</em>。
+</p>
+
+<p lang="en">
    The RWS rule is used when at least one linear whitespace octet is
    required to separate field tokens.  A sender SHOULD generate RWS as a
    single SP.
