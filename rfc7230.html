@@ -2306,7 +2306,15 @@ Kri2001</a>]の<a href="#appendix-A.2.3">付録 A.2.3</a>を見よ。）
    BWS ("bad" whitespace).
 </p>
 
-<p>
+<p lang="ja">
+   <code class="abnf">OWS</code>ルールが使用されるのは、ゼロ個以上の連続するホワイトスペースオクテットが出現するところ
+である。可読性を高めるためにオプションのホワイトスペースを入れることが好まれるプロトコル要素に関しては、送信者はオプションの
+ホワイトスペースを一つの<code class="abnf">SP</code>として生成する<em title="SHOULD">べきである</em>。
+それ以外では、送信者は、インプレースメッセージフィルタリングの間に不正なプロトコル要素や望ましくないプロトコル要素を
+白塗りすることが必要な場合を除き、オプションのホワイトスペースを生成する<em title="SHOULD NOT">べきではない</em>。
+</p>
+
+<p lang="en">
    The OWS rule is used where zero or more linear whitespace octets
    might appear.  For protocol elements where optional whitespace is
    preferred to improve readability, a sender SHOULD generate the
