@@ -2364,7 +2364,16 @@ SP</code>として生成する<em title="SHOULD">べきである</em>。
 <section>
 <span class="h4"><a class="selflink" name="section-3.2.4" href="#section-3.2.4">3.2.4</a>.  Field Parsing</span>
 
-<p>
+<p lang="ja">
+   メッセージは、個々のヘッダーフィールド名に独立した汎用的なアルゴリズムを用いてパースされる。一つのフィールド値の内容は、
+メッセージ解釈の後のステージ（通常、メッセージのヘッダーセクション全体が処理された後）までパースされない。結果的に、
+この仕様は以前の版と同じように、各 "Field-Name: Field Value" ペアを定義するためにABNFルールを使わない。代わりに、
+そのフィールドの対応するフィールド値に関して、ルールが正当な文法を定義する場合に（すなわち、汎用的なフィールドパーサーに
+よってフィールド値（<code class="abnf">field-value</code>）がヘッダーフィールドセクションから抜き取られた後）、
+この仕様は、各登録されたフィールド名に従って命名されたABNFルールを使う。
+</p>
+
+<p lang="en">
    Messages are parsed using a generic algorithm, independent of the
    individual header field names.  The contents within a given field
    value are not parsed until a later stage of message interpretation
