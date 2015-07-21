@@ -2379,7 +2379,16 @@ Field Parsing</span></h4>
    section by a generic field parser).
 </p>
 
-<p>
+<p lang="ja">
+   ヘッダーフィールド名（<code class="abnf">field-name</code>）とコロンの間にホワイトスペースを入れることは
+できない。過去には、ホワイトスペースの扱いの違いが、リクエストルーティングとレスポンス処理の間にセキュリティの脆弱性を
+招いてしまったことがある。サーバーは、ヘッダーフィールド名（<code class="abnf">field-name</code>）とコロンの
+間にホワイトスペースを含む、どんな受信したリクエストメッセージでもレスポンスコード400 （Bad Request）で
+拒否<em title="MUST">しなければならない</em>。メッセージを下流に転送する前に、プロキシは、
+そのようなホワイトスペースをレスポンスメッセージから除去<em title="MUST">しなければならない</em>。
+</p>
+
+<p lang="en">
    No whitespace is allowed between the header field-name and colon.  In
    the past, differences in the handling of such whitespace have led to
    security vulnerabilities in request routing and response handling.  A
