@@ -2365,7 +2365,16 @@ SP</code>として生成する<em title="SHOULD">べきである</em>。
 <h4 id="section-3.2.4">3.2.4. <span lang="ja">フィールド構文解析</span><span lang="en">
 Field Parsing</span></h4>
 
-<p>
+<p lang="ja">
+   メッセージは、個々のヘッダーフィールド名とは独立した、汎用的なアルゴリズムを用いてパースされる。一つのフィールド値の内容は、
+メッセージ解釈におけるもっと後の段階（通常、メッセージのヘッダーセクション全体が処理された後）までパースされない。それ故に、
+この仕様は、以前の版とは違い、各 "Field-Name: Field Value" ペアを定義するためにABNFルールを使わない。代わりに、
+そのフィールドの対応するフィールド値に関して、この仕様は、登録されたフィールド名各々に従って命名されたABNFルールを使う。
+それは、ルールが妥当な文法を定義する場合（すなわち、汎用的なフィールドパーサーによってフィールド値
+（<code class="abnf">field-value</code>）がヘッダーフィールドセクションから取り出された後）である。
+</p>
+
+<p lang="en">
    Messages are parsed using a generic algorithm, independent of the
    individual header field names.  The contents within a given field
    value are not parsed until a later stage of message interpretation
