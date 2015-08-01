@@ -2407,7 +2407,16 @@ field-name</code>）とコロンの間にホワイトスペースを含む場合
    response message before forwarding the message downstream.
 </p>
 
-<p>
+<p lang="ja">
+  フィールド値は、オプションのホワイトスペース（<code class="abnf">OWS</code>）が前後についていても良い。
+人間にとっての一貫した読みやすさのために、一つの<code class="abnf">SP</code>がフィールド値
+（<code class="abnf">field-value</code>）の前にあるのが好ましい。フィールド値はどんな先頭や後尾の
+ホワイトスペースを含まず、ヘッダーフィールドからフィールド値を取り出すときに、フィールド値の最初のホワイトスペース
+ではないオクテットより前や、最後のホワイトスペースではないオクテットの後にある<code class="abnf">OWS</code>は、
+パーサーによって除外されるべきである。
+</p>
+
+<p lang="en">
    A field value might be preceded and/or followed by optional
    whitespace (OWS); a single SP preceding the field-value is preferred
    for consistent readability by humans.  The field value does not
