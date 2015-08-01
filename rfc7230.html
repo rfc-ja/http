@@ -2418,9 +2418,9 @@ field-name</code>）とコロンの間にホワイトスペースを含む場合
 </p>
 
 <p lang="ja">
-    歴史的に、HTTPヘッダーフィールド値は、前にある各余分な行と少なくとも一つのスペースや水平タブ（<code class="abnf">
+    歴史的に、HTTPヘッダーフィールド値は、前にある余分な各行と少なくとも一つのスペースや水平タブ（<code class="abnf">
 abs-fold</code>）によって複数行に拡大することができる。この仕様では、message/http メディアタイプ
-（<a href="#section-8.3.1">Section 8.3.1</a>）内のこのような行の折りたたみを避難する。メッセージが
+（<a href="#section-8.3.1">セクション 8.3.1</a>）内のこのような行の折りたたみを避難する。メッセージが
  message/http メディアタイプのパッケージングを意図されていないなら、送信者は、行の折りたたみ（すなわち、
 <code class="abnf">abs-fold</code>ルールに匹敵するものを含むどんなフィールド値（<code class="abnf">
 field-value</code>））を含むメッセージを生成<em title="MUST NOT">してはならない</em>。
