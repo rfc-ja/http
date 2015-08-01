@@ -2417,7 +2417,16 @@ field-name</code>）とコロンの間にホワイトスペースを含む場合
    parsers when extracting the field value from a header field.
 </p>
 
-<p>
+<p lang="ja">
+    歴史的に、HTTPヘッダーフィールド値は、前にある余分な各行と少なくとも一つのスペースや水平タブ（<code class="abnf">
+abs-fold</code>）によって複数行に拡大することができる。この仕様では、message/http メディアタイプ
+（<a href="#section-8.3.1">セクション 8.3.1</a>）内のこのような行の折りたたみを非難する。メッセージが
+ message/http メディアタイプのパッケージングを意図されていないなら、送信者は、行の折りたたみ（すなわち、
+<code class="abnf">abs-fold</code>ルールに匹敵するものを含むどんなフィールド値（<code class="abnf">
+field-value</code>））を含むメッセージを生成<em title="MUST NOT">してはならない</em>。
+</p>
+
+<p lang="en">
    Historically, HTTP header field values could be extended over
    multiple lines by preceding each extra line with at least one space
    or horizontal tab (obs-fold).  This specification deprecates such
