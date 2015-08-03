@@ -2418,11 +2418,11 @@ field-name</code>）とコロンの間にホワイトスペースを含む場合
 </p>
 
 <p lang="ja">
-    歴史的に、HTTPヘッダーフィールド値は、前にある余分な各行と少なくとも一つのスペースや水平タブ（<code class="abnf">
-abs-fold</code>）によって複数行に拡大することができる。この仕様では、message/http メディアタイプ
-（<a href="#section-8.3.1">セクション 8.3.1</a>）内のこのような行の折りたたみを非難する。メッセージが
- message/http メディアタイプのパッケージングを意図されていないなら、送信者は、行の折りたたみ（すなわち、
-<code class="abnf">abs-fold</code>ルールに匹敵するものを含むどんなフィールド値（<code class="abnf">
+    歴史的に、HTTPヘッダーフィールド値は、追加の各行の先頭に少なくとも一つのスペースや水平タブ（<code class="abnf">
+obs-fold</code>）を付けることによって複数行に拡張されることがあり得る。この仕様は、message/http メディアタイプ
+（<a href="#section-8.3.1">セクション 8.3.1</a>）内を除き、のこのような行の折りたたみを非推奨とする。メッセージが
+ message/http メディアタイプにパッケージングすることを意図されていないなら、送信者は、行の折りたたみ（すなわち、
+<code class="abnf">obs-fold</code>ルールにマッチするものを含むフィールド値（<code class="abnf">
 field-value</code>））を含むメッセージを生成<em title="MUST NOT">してはならない</em>。
 </p>
 
