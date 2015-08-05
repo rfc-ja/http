@@ -2433,7 +2433,15 @@ field-name</code>）とコロンの間にホワイトスペースを含む場合
 
 
 
-<p>
+<p lang="ja">
+   message/http コンテナ内のリクエストメッセージに行の折りたたみ（<code class="abnf">obs-fold</code>）
+を受信するサーバーは、400（Bad Request）を送信することでそのメッセージを拒否か（廃止された行の折りたたみは
+許容されないことを説明する表現を用いるのが好ましい）、フィールド値を解釈する前かメッセージを下流に転送する前に、
+各受信した行の折りたたみ（<code class="abnf">obs-fold</code>）を一つ以上の<code class="abnf">
+SP</code>オクテットで置換<em title="MUST">しなければならない</em>。
+</p>
+
+<p lang="en">
    A server that receives an obs-fold in a request message that is not
    within a message/http container MUST either reject the message by
    sending a 400 (Bad Request), preferably with a representation
