@@ -2461,7 +2461,7 @@ field-value</code>））を含むメッセージを生成<em title="MUST NOT">�
 </p>
 
 <p lang="ja">
-   message/http コンテナに入れられているのではない レスポンスメッセージに<code class="abnf">obs-fold</code>
+   message/http コンテナに入れられているのではないレスポンスメッセージに<code class="abnf">obs-fold</code>
 を受信するプロキシやゲートウェイは、そのメッセージを捨て、502（Bad Gateway）レスポンス（受け付けられない行の折り畳みを受信した
 ことを説明する表現を伴うのが好ましい）で置換するか、フィールド値を解釈する前やメッセージを下流に転送する前に、
 受信した<code class="abnf">obs-fold</code>の各々を一つ以上の<code class="abnf">SP</code>オクテットで置換
