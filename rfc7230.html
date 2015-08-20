@@ -2500,7 +2500,21 @@ obs-fold</code>の各々を一つ以上の<code class="abnf">SP</code>オクテ�
    value.
 </p>
 
-<p>
+<p lang="ja">
+   歴史的に、HTTPはISO-8859-1 キャラクターセット[<a href="#ref-ISO-8859-1" title="&quot;Information 
+technology -- 8-bit single-byte coded graphic character sets -- Part 1: Latin alphabet 
+No. 1&quot;">ISO-8859-1</a>]でのテキストのフィールド内容を許していた。その他のキャラクターセットは
+[<a href="http://tools.ietf.org/html/rfc2047" title="&quot;MIME (Multipurpose Internet 
+Mail Extensions) Part Three: Message Header Extensions for Non-ASCII Text&quot;">RFC2047</a>]
+エンコーディングを使用したもののみサポートしていた。実際には、ほとんどのHTTPヘッダーフィールド値は US-ASCII
+キャラクターセット[<a href="#ref-USASCII" title="&quot;Coded Character Set -- 7-bit American Standard 
+Code for Information Interchange&quot;">USASCII</a>]のサブセットのみを使用している。
+新たに定義されるヘッダーフィールドは、そのフィールド値をUS-ASCIIオクテットのみに限定する<em title="SHOULD">
+べきである</em>。受信者はフィールド内容（<code class="abnf">obs-text</code>）のUS-ASCII以外のオクテットを
+不透明なデータとして扱う<em title="SHOULD">べきである</em>。
+</p>
+
+<p lang="en">
    Historically, HTTP has allowed field content with text in the
    ISO-8859-1 charset [<a href="#ref-ISO-8859-1" title="&quot;Information technology -- 8-bit single-byte coded graphic character sets -- Part 1: Latin alphabet No. 1&quot;">ISO-8859-1</a>], supporting other charsets only
    through use of [<a href="http://tools.ietf.org/html/rfc2047" title="&quot;MIME (Multipurpose Internet Mail Extensions) Part Three: Message Header Extensions for Non-ASCII Text&quot;">RFC2047</a>] encoding.  In practice, most HTTP header
