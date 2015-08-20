@@ -2529,11 +2529,19 @@ Code for Information Interchange&quot;">USASCII</a>]のサブセットのみを�
 <h4 id="section-3.2.5">3.2.5. <span lang="ja">フィールドのリミット</span><span lang="en">
 Field Limits</span></h4>
 
+<p lang="ja">
+    <a href="#section-2.5">セクション 2.5</a>で記述されているように、HTTPは各ヘッダーフィールド全体の
+長さやヘッダーセクションの長さに前もって定義された長さの限界を設けない。個別のヘッダーフィールドの長さにおける
+その場その場での限界は実際様々であり、しばしば特定のフィールドの意味に依存する。
+</p>
+
+<p lang="en">
    HTTP does not place a predefined limit on the length of each header
    field or on the length of the header section as a whole, as described
    in <a href="#section-2.5">Section 2.5</a>.  Various ad hoc limitations on individual header
    field length are found in practice, often depending on the specific
    field semantics.
+</p>
 
    A server that receives a request header field, or set of fields,
    larger than it wishes to process MUST respond with an appropriate 4xx
