@@ -2543,11 +2543,20 @@ Field Limits</span></h4>
    field semantics.
 </p>
 
+<p lang="ja">
+   一つのヘッダーフィールドやヘッダーフィールドの集合の長さが想定したよりも大きいリクエストを
+受信をしたサーバーは、適切な4xx（Client Error）ステータスコードで応答<em title="MUST">しなければならない</em>。
+そのようなヘッダーフィールドを無視することは、リクエストスマグリング攻撃に対するサーバーの脆弱性を増大させる。
+（<a href="#section-9.5">セクション 9.5</a>）
+</p>
+
+<p lang="en">
    A server that receives a request header field, or set of fields,
    larger than it wishes to process MUST respond with an appropriate 4xx
    (Client Error) status code.  Ignoring such header fields would
    increase the server's vulnerability to request smuggling attacks
    (<a href="#section-9.5">Section 9.5</a>).
+</p>
 
    A client MAY discard or truncate received header fields that are
    larger than the client wishes to process if the field semantics are
