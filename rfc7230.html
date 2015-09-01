@@ -2563,9 +2563,9 @@ Field Limits</span></h4>
 <span class="h4"><a class="selflink" name="section-3.2.6" href="#section-3.2.6">3.2.6</a>.  Field Value Components</span>
 
 <p lang="ja">
-  ほとんどのHTTPヘッダーフィールド値は、共通の構文コンポーネント（トークン、引用文字列、そしてコメント）を使い、
-ホワイトスペースや特定の区切り文字で区切られて定義される。区切り文字は、トークン（DQUOTEや "(),/:;&lt;=&gt;?@[\]{}"）
-には許されないUS-ASCIIビジュアルキャラクターのセットから選ばれる。
+  ほとんどのHTTPヘッダーフィールド値は、ホワイトスペースや特定の区切り文字で区切られる共通の構文コンポーネント
+（token, quoted-string, and comment）を使い定義される。区切り文字（DQUOTEや "(),/:;&lt;=&gt;?@[\]{}"）は、
+<code class="abnf">token</code>には許されないUS-ASCII可視文字のセットから選ばれる。
 </p>
 
 <p lang="en">
