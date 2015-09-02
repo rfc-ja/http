@@ -2564,8 +2564,9 @@ Field Limits</span></h4>
 
 <p lang="ja">
   ほとんどのHTTPヘッダーフィールド値は、ホワイトスペースや特定の区切り文字で区切られる共通の構文コンポーネント
-（token, quoted-string, and comment）を使い定義される。区切り文字（DQUOTEや "(),/:;&lt;=&gt;?@[\]{}"）は、
-<code class="abnf">token</code>には許されないUS-ASCII可視文字のセットから選ばれる。
+（<code class="abnf">token</code>、<code class="abnf">quoted-string</code>、そして
+<code class="abnf">comment</code>）を使って定義される。区切り文字は、<code class="abnf">token</code>
+には許されないUS-ASCII可視文字（DQUOTEや "(),/:;&lt;=&gt;?@[\]{}"）のセットから選ばれる。
 </p>
 
 <p lang="en">
