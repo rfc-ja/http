@@ -2572,7 +2572,14 @@ Field Limits</span></h4>
 <h4 id="section-3.2.6">3.2.6. <span lang="ja">フィールド値コンポーネント</span><span lang="en">
 Field Value Components</span></h4>
 
-<p>
+<p lang="ja">
+  ほとんどのHTTPヘッダーフィールド値は、ホワイトスペースや特定の区切り文字で区切られる共通の構文コンポーネント
+（<code class="abnf">token</code>、<code class="abnf">quoted-string</code>、そして
+<code class="abnf">comment</code>）を使って定義される。区切り文字は、<code class="abnf">token</code>
+には許されないUS-ASCII可視文字（<code class="abnf">DQUOTE</code>や "(),/:;&lt;=&gt;?@[\]{}"）のセットから選ばれる。
+</p>
+
+<p lang="en">
    Most HTTP header field values are defined using common syntax
    components (token, quoted-string, and comment) separated by
    whitespace or specific delimiting characters.  Delimiters are chosen
