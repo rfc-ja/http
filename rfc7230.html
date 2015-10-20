@@ -2631,7 +2631,14 @@ Field Value Components</span></h4>
      ctext          = HTAB / SP / %x21-27 / %x2A-5B / %x5D-7E / obs-text
 </pre>
 
-<p>
+<p lang="ja">
+  バックスラッシュオクテット（"\"）は、<code class="abnf">quoted-string</code>とコメントが構成内で
+単一オクテットのクォートメカニズムとして使用できる。<code class="abnf">quoted-string</code>の値を処理する受信者は、
+バックスラッシュに続くオクテットによって置換されたかのように、<code class="abnf">quoted-pair</code>を扱わ
+<em title="MUST">なければならない</em>。
+</p>
+
+<p lang="en">
    The backslash octet ("\") can be used as a single-octet quoting
    mechanism within quoted-string and comment constructs.  Recipients
    that process the value of a quoted-string MUST handle a quoted-pair
