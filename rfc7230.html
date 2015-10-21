@@ -2653,7 +2653,15 @@ Field Value Components</span></h4>
      quoted-pair    = "\" ( HTAB / SP / VCHAR / obs-text )
 </pre>
 
-<p>
+<p class="ja">
+   その文字列内で<code class="abnf">DQUOTE</code>とバックスラッシュオクテットをクォートするために必要である場合を除き、
+送信者は<code class="abnf">quoted-string</code>内で<code class="abnf">quoted-pair</code>を生成
+<em title="SHOULD NOT">するべきではない</em>。その<code class="abnf">comment</code>内で丸括弧 [ "(" と ")" ] と
+バックスラッシュオクテットをクォートするために必要である場合を除き、送信者はコメント内に<code class="abnf">quoted-pair
+</code>を生成<em title="SHOULD NOT">するべきではない</em>。
+</p>
+
+<p class="en">
    A sender SHOULD NOT generate a quoted-pair in a quoted-string except
    where necessary to quote DQUOTE and backslash octets occurring within
    that string.  A sender SHOULD NOT generate a quoted-pair in a comment
