@@ -2681,7 +2681,13 @@ Field Value Components</span></h4>
 <section>
 <h3 id="section-3.3">3.3. <span lang="ja">メッセージボディ</span><span lang="en">Message Body</span></h3>
 
-<p>
+<p lang="ja">
+   HTTPメッセージのメッセージボディ（もしあるなら）はそのリクエストやレスポンスのペイロードボディを伝達するために使用される。
+<a href="#section-3.3.1">セクション 3.3.1</a>で記述されているように、トランスファーコーディングが適用されていないなら、
+メッセージボディはペイロードボディと同一である。
+</p>
+
+<p lang="en">
    The message body (if any) of an HTTP message is used to carry the
    payload body of that request or response.  The message body is
    identical to the payload body unless a transfer coding has been
