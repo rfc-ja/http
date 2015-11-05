@@ -2703,7 +2703,13 @@ Field Value Components</span></h4>
    requests and responses.
 </p>
 
-<p>
+<p lang="ja">
+  リクエストにおけるメッセージボディの存在はContent-LengthやTransfer-Encodingヘッダーフィールドによって示される。
+たとえメソッドがメッセージボディのどんな使用も定義していないとしても、リクエストメッセージフレーミングは
+メソッドセマンティクスとは独立している。
+</p>
+
+<p lang="en">
    The presence of a message body in a request is signaled by a
    Content-Length or Transfer-Encoding header field.  Request message
    framing is independent of method semantics, even if the method does
