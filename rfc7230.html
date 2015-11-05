@@ -2723,8 +2723,9 @@ Field Value Components</span></h4>
 へのリスポンスは、決してメッセージボディを含まない。なぜなら、リクエストメソッドがGET
 （<a href="http://tools.ietf.org/html/rfc7231#section-4.3.1">[RFC7231]のセクション&nbsp;4.3.1</a>）の場合に、
 連想するリスポンスヘッダーフィールド（e.g., Transfer-Encoding, Content-Length, etc.）は、もし存在するなら、
-それらの値が何になるかだけを示すからである。CONNECTリクエストメソッド（<a href="http://tools.ietf.org/html/rfc7231#section-4.3.6">
-[RFC7231]のセクション&nbsp;4.3.6</a>）に対する2xx（Successful）リスポンスは、メッセージボディを持つのではなくトンネルへモードへと切り替える。
+それらの値が何になるかだけを示すからである。CONNECTリクエストメソッド
+（<a href="http://tools.ietf.org/html/rfc7231#section-4.3.6">[RFC7231]のセクション&nbsp;4.3.6</a>）
+に対する2xx（Successful）リスポンスは、メッセージボディを持つのではなくトンネルへモードへと切り替える。
 全ての1xx（Informational）、204（No Content）、そして304（Not Modified）リスポンスはメッセージボディを含まない。
 長さがゼロかもしれないが、その他全てのリスポンスはメッセージボディを含む。
 </p>
