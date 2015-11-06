@@ -2717,17 +2717,17 @@ Field Value Components</span></h4>
 </p>
 
 <p lang="ja">
-   リスポンスにメッセージボディ存在することは、応答しているリクエストメソッドとリスポンスステータスコード
+   レスポンスにメッセージボディが存在するかどうかは、それが応答しようとしているリクエストメソッドとレスポンスステータスコード
 （<a href="#section-3.1.2">セクション 3.1.2</a>）の両方に依存する。HEADリクエストメソッド
 （<a href="http://tools.ietf.org/html/rfc7231#section-4.3.2">[RFC7231]のセクション&nbsp;4.3.2</a>）
-へのリスポンスは、決してメッセージボディを含まない。なぜなら、リクエストメソッドがGET
-（<a href="http://tools.ietf.org/html/rfc7231#section-4.3.1">[RFC7231]のセクション&nbsp;4.3.1</a>）の場合に、
-連想するリスポンスヘッダーフィールド（e.g., Transfer-Encoding, Content-Length, etc.）は、もし存在するなら、
-それらの値が何になるかだけを示すからである。CONNECTリクエストメソッド
+へのレスポンスは、決してメッセージボディを含まない。なぜなら、リクエストメソッドがGET
+（<a href="http://tools.ietf.org/html/rfc7231#section-4.3.1">[RFC7231]のセクション&nbsp;4.3.1</a>）であったならば、
+付随するレスポンスヘッダーフィールド（例えば, Transfer-Encoding, Content-Length, など）は、もし存在するなら、
+それらがなったであろう値を示すからである。CONNECTリクエストメソッド
 （<a href="http://tools.ietf.org/html/rfc7231#section-4.3.6">[RFC7231]のセクション&nbsp;4.3.6</a>）
-に対する2xx（Successful）リスポンスは、メッセージボディを持つのではなくトンネルへモードへと切り替える。
-全ての1xx（Informational）、204（No Content）、そして304（Not Modified）リスポンスはメッセージボディを含まない。
-長さがゼロかもしれないが、その他全てのリスポンスはメッセージボディを含む。
+に対する2xx（Successful）レスポンスは、メッセージボディを持つのではなくトンネルモードへと切り替える。
+全ての1xx（Informational）、204（No Content）、そして304（Not Modified）レスポンスはメッセージボディを含まない。
+長さがゼロかもしれないが、その他全てのレスポンスはメッセージボディを含む。
 </p>
 
 <p lang="en">
