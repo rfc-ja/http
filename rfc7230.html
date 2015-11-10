@@ -2720,7 +2720,21 @@ Field Value Components</span></h4>
    not define any use for a message body.
 </p>
 
-<p>
+<p lang="ja">
+   レスポンスにメッセージボディが存在するかどうかは、それが応答しようとしているリクエストメソッドとレスポンスステータスコード
+（<a href="#section-3.1.2">セクション 3.1.2</a>）の両方に依存する。HEADリクエストメソッド
+（<a href="http://tools.ietf.org/html/rfc7231#section-4.3.2">[RFC7231]のセクション&nbsp;4.3.2</a>）
+へのレスポンスは、決してメッセージボディを含まない。なぜなら付随するレスポンスヘッダーフィールド（例えば, Transfer-Encoding, 
+Content-Length, など）がもしあったならば、それは、もしリクエストメソッドがGET
+（<a href="http://tools.ietf.org/html/rfc7231#section-4.3.1">[RFC7231]のセクション&nbsp;4.3.1</a>）
+であったならばそれらがそうだったであろう値を示すからである。CONNECTリクエストメソッド
+（<a href="http://tools.ietf.org/html/rfc7231#section-4.3.6">[RFC7231]のセクション&nbsp;4.3.6</a>）
+に対する2xx（Successful）レスポンスは、メッセージボディを持つのではなくトンネルモードへと切り替える。
+全ての1xx（Informational）、204（No Content）、そして304（Not Modified）レスポンスはメッセージボディを含まない。
+長さがゼロかもしれないが、その他全てのレスポンスはメッセージボディを含む。
+</p>
+
+<p lang="en">
    The presence of a message body in a response depends on both the
    request method to which it is responding and the response status code
    (<a href="#section-3.1.2">Section 3.1.2</a>).  Responses to the HEAD request method (<a href="http://tools.ietf.org/html/rfc7231#section-4.3.2">Section&nbsp;4.3.2
