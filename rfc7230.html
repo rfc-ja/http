@@ -2770,7 +2770,19 @@ Transfer-Encoding</span></h4>
 
 
 
-<p>
+<p lang="ja">
+  受信者は塊になった転送コーディング（<a href="#section-4.1">セクション 4.1</a>）をパース<em title="MUST">
+できなければならない</em>。なぜならそれは、ペイロードボディのサイズが前もってわかっていない場合、
+メッセージフレーミングにおいて重要な役割を持つためである。送信者は塊になったメッセージを一回以上メッセージボディに
+適用<em title="MUST NOT">してはならない</em>（すなわち、既に塊になったメッセージを塊にしようとすることは許されない）。
+もし塊以外のどんな転送コーディングがリクエストペイロードボディに適用された場合、その送信者はメッセージが適切にフレーミング
+されていることを保証するために塊を最後の転送コーディングとして適用<em title="MUST">しなければならない</em>。
+もし塊以外のどんな転送コーディングがレスポンスペイロードボディに適用された場合、その送信者は塊を最後の転送コーディングとして
+適用<em title="MUST">しなければならない</em>か、コネクションを閉じることでメッセージを抹消<em title="MUST">
+しなければならない</em>。
+</p>
+
+<p lang="en">
    A recipient MUST be able to parse the chunked transfer coding
    (<a href="#section-4.1">Section 4.1</a>) because it plays a crucial role in framing messages
    when the payload body size is not known in advance.  A sender MUST
