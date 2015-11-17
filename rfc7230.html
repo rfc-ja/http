@@ -2784,7 +2784,18 @@ Transfer-Encoding</span></h4>
 
 
 
-<p>
+<p lang="ja">
+  受信者はチャンク転送コーディング（<a href="#section-4.1">セクション 4.1</a>）をパースできなければ
+<em title="MUST">ならない</em>。なぜならそれは、ペイロードボディのサイズが前もってわかっていないときに
+メッセージフレーミングにおいて重要な役割を持つためである。送信者はチャンクドメッセージを一度しかメッセージボディに
+適用<em title="MUST NOT">してはならない</em>（すなわち、既にチャンクになったメッセージをさらにチャンクすることは許されない）。
+もしチャンクド以外の転送コーディングがリクエストペイロードボディに適用する場合、その送信者はメッセージが適切にフレーム
+されていることを保証するためにチャンクを最後の転送コーディングとして適用<em title="MUST">しなければならない</em>。
+もしチャンクド以外の転送コーディングがレスポンスペイロードボディに適用した場合、その送信者はチャンクを最後の転送
+コーディングとして適用するかコネクションを閉じることでメッセージを終結させ<em title="MUST">なければならない</em>。
+</p>
+
+<p lang="en">
    A recipient MUST be able to parse the chunked transfer coding
    (<a href="#section-4.1">Section 4.1</a>) because it plays a crucial role in framing messages
    when the payload body size is not known in advance.  A sender MUST
