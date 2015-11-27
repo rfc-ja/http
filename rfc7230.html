@@ -2832,7 +2832,16 @@ Transfer-Encoding</span></h4>
    message body.
 </p>
 
-<p>
+<p lang="ja">
+   Content-Encoding（<a href="http://tools.ietf.org/html/rfc7231#section-3.1.2.1">
+[RFC7231]のセクション3.1.2.1</a>）とは違い、Transfer-Encodingは表現ではなくメッセージのプロパティであり、
+連鎖上のリクエストやレスポンスのどの受信者でも受信した転送コーディングをデコードしたり更なる転送コーディングをメッセージボディに
+適用したり<em title="MAY">してもよい</em>。それは対応する変化はTransfer-Encodingフィールド値に対して行われる前提です。
+対応する変化はTransfer-Encodingフィールド値に対して行われる前提でエンコーディングパラメタについての追加の情報は、
+この仕様で定義されない他のヘッダーフィールドによって提供されうる。
+</p>
+
+<p lang="en">
    Unlike Content-Encoding (<a href="http://tools.ietf.org/html/rfc7231#section-3.1.2.1">Section&nbsp;3.1.2.1 of [RFC7231]</a>),
    Transfer-Encoding is a property of the message, not of the
    representation, and any recipient along the request/response chain
