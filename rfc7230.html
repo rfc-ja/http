@@ -2843,7 +2843,15 @@ Transfer-Encoding</span></h4>
    header fields not defined by this specification.
 </p>
 
-<p>
+<p lang="ja">
+   Transer-Encodingは、HEADリクエストへのレスポンスとして、またはGETリクエストへの304 （Not Modified）のレスポンス（
+<a href="http://tools.ietf.org/html/rfc7232#section-4.1">[RFC7232]のセクション4.1</a>）として送信
+<em title="MAY">してもよい</em>。もしリクエストが条件のないGETであったなら、オリジンサーバーがメッセージボディに
+転送コーディングを適用したであろう事を示すため、そのどちらもメッセージボディを含まない。しかし、それらが必要ない場合に
+レスポンス連鎖上のどの受信者（オリジンサーバーも含む）も転送コーディングを除去できるため、この指標は必須ではない。
+</p>
+
+<p lang="en">
    Transfer-Encoding MAY be sent in a response to a HEAD request or in a
    304 (Not Modified) response (<a href="http://tools.ietf.org/html/rfc7232#section-4.1">Section&nbsp;4.1 of [RFC7232]</a>) to a GET
    request, neither of which includes a message body, to indicate that
