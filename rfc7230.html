@@ -2886,7 +2886,17 @@ Transfer-Encoding</span></h4>
    [RFC7231]</a>).
 </p>
 
-<p>
+<p lang="ja">
+   Transfer-EncodingはHTTP/1.1で追加された。HTTP/1.0サポートだけをうたった実装は、転送エンコード
+されたペイロードをどうやって処理するかを理解しない、と一般的に考えられる。クライアントは、サーバーがHTTP/1.1
+（もしくはそれより後のバージョン）のリクエストを扱うことがわかっていなければ、Transfer-Encodingを含むリクエストを送信
+<em title="MUST NOT">してはならない</em>。そのような知識は、特定のユーザー設定の形式だったり、前に受信した
+レスポンスのバージョンを覚えたものになっているかもしれない。サーバーは、対になるリクエストがHTTP/1.1
+（もしくはそれより後のバージョン）を示さなければ、Transfer-Encodingを含むレスポンスを送信
+<em title="MUST NOT">してはならない</em>。
+</p>
+
+<p lang="en">
    Transfer-Encoding was added in HTTP/1.1.  It is generally assumed
    that implementations advertising only HTTP/1.0 support will not
    understand how to process a transfer-encoded payload.  A client MUST
