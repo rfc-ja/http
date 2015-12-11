@@ -2956,7 +2956,15 @@ Content-Length</span></h4>
    that contains a Transfer-Encoding header field.
 </p>
 
-<p>
+<p lang="ja">
+   Transfer-Encodingが送信されず、リクエストメソッドが同封されたペイロードボディの意味を定義する場合、
+ユーザーエージェントはリクエストメッセージにContent-Lengthを送信<em title="SHOULD NOT">するべきではない</em>。
+例えば、Content-Lengthヘッダーフィールドは、その値が0（空のペイロードボディを示す）の場合でも、通常POSTリクエストで
+送信される。リクエストメッセージがペイロードボディを含まず、メソッドセマンティクスがそのようなボディを予期しない場合、
+ユーザーエージェントはContent-Lengthヘッダーフィールドを送信<em title="SHOULD NOT">すべきではない</em>。
+</p>
+
+<p lang="en">
    A user agent SHOULD send a Content-Length in a request message when
    no Transfer-Encoding is sent and the request method defines a meaning
    for an enclosed payload body.  For example, a Content-Length header
