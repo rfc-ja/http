@@ -2928,7 +2928,15 @@ Transfer-Encoding</span></h4>
 <h4 id="section-3.3.2">3.3.2. <span lang="ja">コンテントの長さ</span><span lang="en">
 Content-Length</span></h4>
 
-<p>
+<p lang="ja">
+   メッセージがTransfer-Encodingヘッダーフィールドを持たない場合、Content-Lengthヘッダーフィールドはその後続く
+ペイロードボディに関して予想されるサイズをオクテット数の10進法表記で提供できる。ペイロードボディを含んだメッセージに
+関しては、Content-Lengthフィールド値は、どこでボディ（とメッセージ）が終わるか決めるのに必要なフレーミング
+情報を提供する。ペイロードボディを含まないメッセージに関しては、Content-Lengthは選択された表現
+（<a href="http://tools.ietf.org/html/rfc7231#section-3">[RFC7231]のセクション3</a>）のサイズを示す。
+</p>
+
+<p lang="en">
    When a message does not have a Transfer-Encoding header field, a
    Content-Length header field can provide the anticipated size, as a
    decimal number of octets, for a potential payload body.  For messages
