@@ -2913,7 +2913,12 @@ Transfer-Encoding</span></h4>
    request indicates HTTP/1.1 (or later).
 </p>
 
-<p>
+<p lang="ja">
+   理解できない転送コーディングを伴うリクエストメッセージを受信したサーバーは、501 (Not Implemented)で
+応答<em title="SHOULD">するべきである</em>。
+</p>
+
+<p lang="en">
    A server that receives a request message with a transfer coding it
     does not understand SHOULD respond with 501 (Not Implemented).
 </p>
