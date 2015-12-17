@@ -2957,9 +2957,9 @@ Content-Length</span></h4>
 </p>
 
 <p lang="ja">
-   Transfer-Encodingが送信されず、リクエストメソッドが同封されたペイロードボディの意味を定義する場合、
-ユーザーエージェントはリクエストメッセージにContent-Lengthを送信<em title="SHOULD NOT">するべきではない</em>。
-例えば、Content-Lengthヘッダーフィールドは、その値が0（空のペイロードボディを示す）の場合でも、通常POSTリクエストで
+   Transfer-Encodingが送信されず、同封されたペイロードボディの意味をリクエストメソッドが定義している場合、
+ユーザーエージェントはリクエストメッセージにてContent-Lengthを送信<em title="SHOULD">するべきである</em>。
+例えば、Content-Lengthヘッダーフィールドは、その値が0（空のペイロードボディを示す）の場合でも、通常POSTリクエストにて
 送信される。リクエストメッセージがペイロードボディを含まず、メソッドセマンティクスがそのようなボディを予期しない場合、
 ユーザーエージェントはContent-Lengthヘッダーフィールドを送信<em title="SHOULD NOT">すべきではない</em>。
 </p>
