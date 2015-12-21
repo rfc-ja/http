@@ -2992,7 +2992,15 @@ Content-Length</span></h4>
    body.
 </p>
 
-<p>
+<p lang="ja">
+   サーバーはHEADリクエスト（<a href="http://tools.ietf.org/html/rfc7231#section-4.3.2">[RFC7231]のセクション4.3.2</a>）
+へのレスポンスとしてContent-Lengthヘッダーフィールドを送信<em title="MAY">してもよい</em>。
+同じリクエストがGETメソッド使ったなら、レスポンスのペイロードボディにて送信されたであろうオクテット数
+の十進数とフィールド値が等しくなければ、サーバーはそのようなレスポンスでContent-Lengthを送信<em title="MUST NOT">
+してはならない</em>。
+</p>
+
+<p lang="en">
    A server MAY send a Content-Length header field in a response to a
    HEAD request (<a href="http://tools.ietf.org/html/rfc7231#section-4.3.2">Section&nbsp;4.3.2 of [RFC7231]</a>); a server MUST NOT send
    Content-Length in such a response unless its field-value equals the
