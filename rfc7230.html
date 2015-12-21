@@ -2986,9 +2986,9 @@ Content-Length</span></h4>
 
 <p lang="ja">
    サーバーはHEADリクエスト（<a href="http://tools.ietf.org/html/rfc7231#section-4.3.2">[RFC7231]のセクション4.3.2</a>）
-へのレスポンスとしてContent-Lengthヘッダーフィールドを送信<em title="MAY">してもよい</em>。
-同じリクエストがGETメソッド使ったなら、レスポンスのペイロードボディにて送信されたであろうオクテット数
-の十進数とフィールド値が等しくなければ、サーバーはそのようなレスポンスでContent-Lengthを送信<em title="MUST NOT">
+へのレスポンスにてContent-Lengthヘッダーフィールドを送信<em title="MAY">してもよく</em>、
+フィールド値が同じリクエストがGETメソッド使ったならレスポンスのペイロードボディにて送信されたであろうオクテット数
+の十進表記と等しくないのであれば、サーバーはそのようなレスポンスでContent-Lengthを送信<em title="MUST NOT">
 してはならない</em>。
 </p>
 
