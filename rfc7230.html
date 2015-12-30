@@ -3030,7 +3030,14 @@ Content-Length</span></h4>
    [RFC7231]</a>).
 </p>
 
-<p>
+<p lang="ja">
+   上記で定義されたケースとは別に、Transfer-Encodingの欠如において、完全なヘッダーセクションを送信するより前に
+ペイロードボディサイズがわかっている場合、オリジンサーバーはContent-Lengthヘッダーフィールドを送信
+<em title="SHOULD">するべきである</em>。これは転送の進展を測ること、いつ受信したメッセージが完全になるかを知ること、
+そして後に続く追加のリクエストのためにコネクションを再利用することを下流の受信者に許可する。
+</p>
+
+<p lang="en">
    Aside from the cases defined above, in the absence of
    Transfer-Encoding, an origin server SHOULD send a Content-Length
    header field when the payload body size is known prior to sending the
