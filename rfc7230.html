@@ -3030,7 +3030,14 @@ Content-Length</span></h4>
    request.
 </p>
 
-<p>
+<p lang="ja">
+   サーバーは1xx (Informational) や204 (No Content) ステータスコードのどんなレスポンスにおいてもContent-Length
+ヘッダーフィールドを送信<em title="MUST NOT">してはならない</em>。サーバーはCONNECTリクエスト
+（<a href="http://tools.ietf.org/html/rfc7231#section-4.3.6">[RFC7231]のセクション4.3.6</a>）に対するどんな
+2xx (Successful) レスポンスにおいてもContent-Lengthヘッダーフィールドを送信<em title="MUST NOT">してはならない</em>。
+</p>
+
+<p lang="en">
    A server MUST NOT send a Content-Length header field in any response
    with a status code of 1xx (Informational) or 204 (No Content).  A
    server MUST NOT send a Content-Length header field in any 2xx
