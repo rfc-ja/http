@@ -3054,7 +3054,13 @@ Content-Length</span></h4>
    and potentially reuse the connection for additional requests.
 </p>
 
-<p>
+<p lang="ja">
+   ゼロ以上の全てのContent-Lengthフィールド値は正当である。ペイロードの長さには前もって定義された限界はないため、
+受信者はその後続く大きな十進数を予期し、整数変換オーバーフロー（<a href="#section-9.3">セクション 9.3</a>）による
+エラーパースを防止<em title="MUST">しなければならない</em>。
+</p>
+
+<p lang="en">
    Any Content-Length field value greater than or equal to zero is
    valid.  Since there is no predefined limit to the length of a
    payload, a recipient MUST anticipate potentially large decimal
